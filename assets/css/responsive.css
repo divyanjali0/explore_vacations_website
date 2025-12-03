@@ -1,6 +1,31 @@
 @import url("https://use.typekit.net/zhg1qdc.css");
+@media (min-width: 768px) {
+  #homePage #homeHero .homeHeroSwiper .swiper-wrapper .img-fluid {
+    height: 100vh !important;
+  }
+  #homePage #homeHero .homehero-content h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  #homePage #homeHero .homehero-content p {
+    font-size: 16px;
+  }
+  #homePage #homeHero .homehero-content a {
+    font-size: 16px;
+  }
+}
 @media (min-width: 992px) {
   p, a, ul, li {
     font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  #homePage #homeHero .homehero-content h1 {
+    font-size: 54px;
+    line-height: 68px;
+  }
+  #homePage #homeHero .homehero-content p {
+    font-size: 18px;
+    line-height: 30px;
   }
 }/*# sourceMappingURL=responsive.css.map */

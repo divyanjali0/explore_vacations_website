@@ -1,6 +1,5 @@
 <?php
-include ('./config.php');
-
+    include ('./config.php');
 ?>
 
 <!DOCTYPE html>
@@ -47,10 +46,41 @@ include ('./config.php');
 
     <!-- Home hero starts -->
     <section id="homeHero">
-        <img src="assets/images/home-hero.webp" alt="Ceylon Adventure Tours">
+        <!-- Swiper Container -->
+        <div class="swiper homeHeroSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="assets/images/home-hero/img-1.jpg" alt="Explore Vacations"class="img-fluid d-none d-md-block">
+                    <img src="assets/images/home-hero/img-1-sm.jpg" alt="Explore Vacations" class="img-fluid d-md-none">
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="assets/images/home-hero/img-2.jpg" alt="Explore Vacations" class="img-fluid d-none d-md-block">
+                    <img src="assets/images/home-hero/img-2-sm.jpg" alt="Explore Vacations" class="img-fluid d-md-none">
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="assets/images/home-hero/img-3.jpg" alt="Explore Vacations" class="img-fluid d-none d-md-block">
+                    <img src="assets/images/home-hero/img-3-sm.jpg" alt="Explore Vacations" class="img-fluid d-md-none">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
         <div class="homehero-content">
-            <h1 data-aos="fade-down-right" data-aos-duration="1000">Discover Wonders<br class="d-md-none"> with<br class="d-none d-md-block"> Every Step</h1>
-            <p class="mt-3" data-aos="fade-down-left" data-aos-duration="1000">Sri Lanka is not just an island, it's a life <br class="d-md-none">changing experience! <br>Embark on an unforgettable journey through <br class="d-md-none">Sri Lanka's enchanting <br class="d-none d-md-block">landscapes.</p>
+            <h1 data-aos="fade-down-right" data-aos-duration="1000">
+                Discover Wonders<br class="d-md-none"> with<br class="d-none d-md-block"> Every Step
+            </h1>
+
+            <p class="mt-3" data-aos="fade-down-left" data-aos-duration="1000">
+                Sri Lanka is not just an island, it's a life <br class="d-md-none">changing experience!
+                <br>Embark on an unforgettable journey through
+                <br class="d-md-none">Sri Lanka's enchanting <br class="d-none d-md-block">landscapes.
+            </p>
+
             <a href="./contact" class="mt-3">Contact Us</a>
         </div>
     </section>
@@ -70,37 +100,21 @@ include ('./config.php');
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
-    <script>
-        // Team photo swiper
-        var swiper = new Swiper(".specials", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
+<script>
+    const heroSwiper = new Swiper(".homeHeroSwiper", {
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        speed: 800,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        }
+    });
+</script>
 
-        // Testimonial carousel
-        var swiper = new Swiper(".testimonials", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
     
 </body>
 </html>
