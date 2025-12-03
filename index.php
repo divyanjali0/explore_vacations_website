@@ -13,14 +13,14 @@ include ('./config.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo WEBSITE_DESCRIPTION; ?>">
     <meta name="keywords" content="<?php echo WEBSITE_KEYWORDS; ?>">
-    <meta name="author" content="">
+    <meta name="author" content="Explore Vacations">
     <meta name="robots" content="index, follow">
 
     <!-- Page Title -->
     <title><?php echo WEBSITE_NAME; ?></title>
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="">
