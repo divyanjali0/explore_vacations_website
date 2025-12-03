@@ -46,7 +46,6 @@
 
     <!-- Home hero starts -->
     <section id="homeHero">
-        <!-- Swiper Container -->
         <div class="swiper homeHeroSwiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
@@ -71,16 +70,8 @@
 
         <!-- Hero Content -->
         <div class="homehero-content">
-            <h1 data-aos="fade-down-right" data-aos-duration="1000">
-                Discover Wonders<br class="d-md-none"> with<br class="d-none d-md-block"> Every Step
-            </h1>
-
-            <p class="mt-3" data-aos="fade-down-left" data-aos-duration="1000">
-                Sri Lanka is not just an island, it's a life <br class="d-md-none">changing experience!
-                <br>Embark on an unforgettable journey through
-                <br class="d-md-none">Sri Lanka's enchanting <br class="d-none d-md-block">landscapes.
-            </p>
-
+            <h1 data-aos="fade-down-right" data-aos-duration="1000">Discover Wonders<br class="d-md-none"> with<br class="d-none d-md-block"> Every Step</h1>
+            <p class="mt-3" data-aos="fade-down-left" data-aos-duration="1000">Discover unforgettable journeys with Explore Vacations. <br>Adventure, relaxation, and memories that last a lifetime.</p>
             <a href="./contact" class="mt-3">Contact Us</a>
         </div>
     </section>
@@ -100,21 +91,19 @@
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
-<script>
-    const heroSwiper = new Swiper(".homeHeroSwiper", {
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
-        speed: 800,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        }
-    });
-</script>
-
-    
+    <script>
+        const heroSwiper = new Swiper(".homeHeroSwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+    </script>
 </body>
 </html>
