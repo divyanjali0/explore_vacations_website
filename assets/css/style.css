@@ -19,13 +19,9 @@ header .navbar {
 }
 header .navbar .navbar-brand {
   color: #ffffff;
-  margin: 0;
 }
 header .navbar .navbar-brand img {
-  width: 2.2rem;
-}
-header .navbar .navbar-brand span span {
-  color: #0060a6;
+  width: 20%;
 }
 header .navbar .navbar-toggler {
   color: #ffffff;
@@ -36,14 +32,14 @@ header .navbar .offcanvas {
 }
 header .navbar .offcanvas .offcanvas-header .offcanvas-title {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 22px;
 }
 header .navbar .offcanvas .offcanvas-header .offcanvas-title span {
   color: #0060a6;
 }
 header .navbar .offcanvas .offcanvas-header .btn-close {
   border-radius: 50px;
-  background-color: #0060a6;
+  background-color: #fbfbfb;
 }
 header .navbar .offcanvas .offcanvas-body .navbar-nav {
   line-height: 30px;
@@ -251,8 +247,11 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 }
 
 footer {
-  background-color: #000000;
   color: #ffffff;
+  background-image: url("../images/footer-img.png"), linear-gradient(165deg, rgba(255, 255, 255, 0) 0%, #000000 100%) !important;
+  background-size: cover;
+  overflow: hidden;
+  background-blend-mode: overlay;
 }
 footer .row:first-child {
   padding: 50px 0 50px 0;
@@ -263,14 +262,14 @@ footer .row:first-child .footer-logo {
   align-items: center;
 }
 footer .row:first-child .footer-logo img {
-  width: 2.4rem;
+  width: 40%;
 }
 footer .row:first-child .footer-logo span {
   color: #0060a6;
 }
 footer .row:first-child h6 {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 26.4px;
   margin: 0;
   margin-bottom: 15px;
@@ -278,9 +277,9 @@ footer .row:first-child h6 {
 }
 footer .row:first-child p {
   margin: 0;
-  font-size: 12px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   line-height: normal;
   color: #ffffff;
 }
@@ -299,22 +298,27 @@ footer .row:first-child ul li a {
 }
 footer .row:first-child #footer-social-list li a {
   display: flex;
-  width: 37px;
-  height: 37px;
+  width: 40px;
+  height: 40px;
   padding: 15px;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  border: 1px solid #000000;
-  background: #000000;
-  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  background: rgba(0, 0, 0, 0);
+  color: #ffffff;
+}
+footer .row:first-child #footer-contact-list li img {
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 40%;
 }
 footer .row:first-child #footer-contact-list li a {
   color: #ffffff;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 46px;
 }
 footer .row:last-child p {
   color: #ffffff;
