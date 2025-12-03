@@ -28,21 +28,6 @@
                     <li>
                         <a href="./">Home</a>
                     </li>
-                    <li>
-                        <a href="./tours">Tours</a>
-                    </li>
-                    <li>
-                        <a href="./gallery">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="./about">About us</a>
-                    </li>
-                    <li>
-                        <a href="./contact">Contact us</a>
-                    </li>
-                    <li>
-                        <a href="./apply-license">Apply For License</a>
-                    </li>
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-4 order-lg-4">
