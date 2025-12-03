@@ -102,7 +102,36 @@
             </div>
         </div>
     </section>
-    <!-- Why choose us section ends -->
+
+    <!-- Service Counter section starts -->
+    <section id="service-counter" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="service-counter-wrapper d-flex flex-column flex-md-row justify-content-around align-items-center">
+                        <div class="counter-item text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <h2 class="counter-number">500+</h2>
+                            <p class="counter-label">Happy Travelers</p>
+                        </div>
+                        <div class="counter-item text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <h2 class="counter-number">150+</h2>
+                            <p class="counter-label">Destinations Covered</p>
+                        </div>
+                        <div class="counter-item text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <h2 class="counter-number">50+</h2>
+                            <p class="counter-label">Expert Guides</p>
+                        </div>
+                        <div class="mb-0 counter-item text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                            <h2 class="counter-number">24/7</h2>
+                            <p class="counter-label">Customer Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Counter section ends -->
+
 
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
@@ -132,5 +161,7 @@
             }
         });
     </script>
+
+
 </body>
 </html>

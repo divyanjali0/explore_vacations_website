@@ -16,6 +16,9 @@
   #homePage #homeHero .homehero-content a {
     font-size: 16px;
   }
+  #homePage #service-counter .service-counter-wrapper .counter-item {
+    margin: 0 !important;
+  }
 }
 @media (min-width: 992px) {
   p, a, ul, li {

@@ -230,6 +230,39 @@ header {
       }
     }
   }
+
+  #service-counter {
+    background-color: #f8f9fa; 
+
+    .service-counter-wrapper {
+      flex-wrap: wrap;
+
+      .counter-item {
+        text-align: center;
+        margin: 32px 0;
+        transition: transform 0.3s ease;
+        margin-top: 0;
+
+        &:hover {
+          transform: translateY(-10px); 
+        }
+
+        .counter-number {
+          font-size: 32px;
+          font-weight: 700;
+          color: $color-primary; 
+          margin-bottom: 0;
+        }
+
+        .counter-label {
+          font-size: 1.1rem;
+          color: $color-black;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 //Whatsapp widget styles starts
