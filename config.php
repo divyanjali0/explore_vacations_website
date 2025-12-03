@@ -1,10 +1,9 @@
 <?php
 // Define website settings
-define('WEBSITE_NAME', 'Ceylon Adventure Tours');
-define('WEBSITE_DESCRIPTION', "CEYLON ADVENTURE TOURS, with over 20 years of experience in Motorcycle Tours & Rentals, our expert team is renowned for crafting unique journeys. Our team of seasoned tour operators isn't just well-experienced; they're passionate adventurers with a deep love for exploration. We've earned recognition not only within Sri Lanka but also on the global stage for our unmatched uniqueness and quality service. We're not just tour operators; we're storytellers who provide professional and friendly service for your ultimate satisfaction. Join us in exploring Sri Lanka, where adventure meets excellence");
-define('WEBSITE_KEYWORDS', "adventure tours, ceylon adventure tours, motorcycle tours, adventure, explore, discover, experience, travel, tours in ella, tours in vietnam, honda bikes in ella, royal enfield in ella");
+define('WEBSITE_NAME', 'Explore Vacations');
+define('WEBSITE_DESCRIPTION', "Explore Vacations is your trusted travel partner for discovering the world's most breathtaking destinations. From relaxing beach escapes to adventure-filled tours, we curate unforgettable travel experiences for families, couples, and solo explorers. Our team is dedicated to providing personalized itineraries, reliable service, and seamless journeys—ensuring your vacation is filled with comfort, excitement, and unforgettable memories.");
+define('WEBSITE_KEYWORDS', "Explore Vacations, travel agency, holiday packages, adventure tours, family vacations, honeymoon trips, custom travel plans, worldwide tours, beach holidays, nature tours, travel experiences, vacation planning, guided tours");
 
-// Define email Configuration
 // Define email Configuration
 define('MAIL_MAILER', 'smtp');
 define('SMTP_HOST', 'sandbox.smtp.mailtrap.io');
@@ -13,7 +12,7 @@ define('SMTP_PASSWORD', 'a2ded8e7904720');
 define('SMTP_PORT', 2525);
 define('SMTP_FROM_EMAIL', 'no-reply@example.com');
 define('MAIL_ENCRYPTION', 'tls');
-define('SMTP_FROM_NAME', 'Ceylon Adventure Tours');
+define('SMTP_FROM_NAME', 'Explore Vacations');
 
 // Timezone
 date_default_timezone_set('Asia/Colombo');
