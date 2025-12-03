@@ -1,0 +1,1277 @@
+@import "variables";
+
+* {
+  transition: transform 0.3s ease-in-out;
+}
+
+p, a, ul, li {
+  font-size: 14px;
+}
+
+//Whatsapp widget styles starts
+#whatsapp-widget {
+  .chat-header,
+  .chat-content,
+  .message-input {
+    position: fixed;
+    right: 20px;
+    width: 300px;
+    background-color: #e5ddd5;
+    z-index: 10003;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .chat-header {
+    top: calc(100% - 420px);
+    height: 60px;
+    background-color: #075e54;
+    color: white;
+    padding: 10px;
+    display: none;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+
+    .avatar-container {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .online-dot {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 12px;
+      height: 12px;
+      background-color: #25d366;
+      border-radius: 50%;
+      border: 2px solid #075e54;
+    }
+
+    .chat-header-info {
+      flex-grow: 1;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 0;
+      color: #FFF;
+    }
+
+    .online-status {
+      font-size: 12px;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .chat-content {
+    top: calc(100% - 360px);
+    height: 300px;
+    padding: 20px;
+    overflow-y: auto;
+    display: none;
+
+    .message {
+      max-width: 80%;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      border-radius: 7.5px;
+      position: relative;
+      word-wrap: break-word;
+
+      &.received {
+        background-color: #ffffff;
+        align-self: flex-start;
+      }
+
+      &.sent {
+        background-color: #dcf8c6;
+        align-self: flex-end;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .message-input {
+    bottom: 20px;
+    height: 60px;
+    display: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .whatsapp-btn {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: #128c7e;
+    }
+  }
+
+  .typing-indicator {
+    background-color: #e5ddd5;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+
+    span {
+      height: 10px;
+      width: 10px;
+      float: left;
+      margin: 0 1px;
+      background-color: #9e9ea1;
+      display: block;
+      border-radius: 50%;
+      opacity: 0.4;
+
+      &:nth-of-type(1) {
+        animation: 1s blink infinite 0.3333s;
+      }
+
+      &:nth-of-type(2) {
+        animation: 1s blink infinite 0.6666s;
+      }
+
+      &:nth-of-type(3) {
+        animation: 1s blink infinite 0.9999s;
+      }
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .chat-icon {
+    position: fixed;
+    bottom: 90px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10004;
+    animation: wave 2s infinite;
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+}
+//Whatsapp widget styles ends
+
+.supportive-text {
+  color: $text-black;
+  font-size: 22px;
+  font-family: $font-tagline;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  line-height: 28px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: $text-black;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+  text-transform: capitalize;
+
+  span {
+    color: $active-green;
+  }
+}
+
+.justify-text {
+  text-align: justify;
+  margin: 0;
+}
+
+// Header styling starts
+header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  .navbar {
+    background-color: rgba(23, 23, 23, 0.6);
+
+    .navbar-brand {
+      color: $pure-white;
+      margin: 0;
+
+      img {
+        width: 2.2rem;
+      }
+
+      span {
+        span {
+          color: $brand-yellow;
+        }
+      }
+    }
+
+    .navbar-toggler {
+      color: $pure-white;
+    }
+
+    .offcanvas {
+      width: 80%;
+      background-color: $pure-black;
+
+      .offcanvas-header {
+        .offcanvas-title {
+          color: $pure-white;
+          font-size: 15px;
+
+          span {
+            color: $brand-yellow;
+          }
+        }
+
+        .btn-close {
+          border-radius: 50px;
+          background-color: $brand-yellow;
+        }
+      }
+
+      .offcanvas-body {
+        .navbar-nav {
+          line-height: 30px;
+
+          .nav-item {
+            margin: 0;
+
+            .nav-link {
+              font-family: $font-secondary;
+              color: $pure-white;
+              text-transform: uppercase;
+            }
+
+            &:hover {
+              .nav-link {
+                color: $brand-yellow;
+
+                &::after {
+                  content: "";
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Header styling ends
+
+// Hero styling starts
+#hero {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 250px;
+
+  .hero-content {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  h1 {
+    color: $pure-white;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+// Hero styling ends
+
+// Hero & homeHero comman styles starts
+#hero, #homeHero {
+  height: 50vh;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  /* Add the overlay */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $light-background-black;
+  }
+}
+// Hero & homeHero comman styles ends
+
+/*===========================================================================
+HOME PAGE STARTS
+=============================================================================*/
+#homePage {
+  //Home hero styling starts
+  #homeHero {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .homehero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: inherit;
+    }
+
+    h1 {
+      color: $pure-white;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 36px;
+      margin: 0;
+    }
+
+    p {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $pure-white;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 24px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 14px 20px;
+      color: $pure-white;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 2px solid $pure-white;
+
+      &:hover {
+        background-color: $brand-yellow;
+        color: $pure-black;
+        border: 1.475px solid $brand-yellow;
+      }
+    }
+  }
+  //Home hero styling ends
+
+  // Welcome styling starts
+  #welcome {
+    .welcome-intro {
+      padding: 50px;
+      background-color: $background-yellow;
+      height: 100%;
+      border-radius: 0px 0px 0px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      h2 {
+        margin: 0;
+        text-align: left;
+        line-height: 36px;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 18px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .welcome-details {
+      padding: 30px 40px;
+      background-color: #F7F7F7;
+
+      span {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        h3 {
+          margin: 0 0 0 5px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 0;
+        }
+      }
+      
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {   
+          &:not(:last-child) {
+            margin-bottom: 25px;
+          }
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+  // Welcome styling ends
+
+  // Booking styling starts
+  #booking {
+    form {
+      #requiredVehicles {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .form-check {
+          flex: 2 50%;
+          // padding: 10px;
+        }
+      }
+    }
+  }
+  // Booking styling ends
+
+  // Get license styling starts
+  #getLicense {
+    a {
+      display: inline-block;
+      padding: 14px 20px;
+      color: $primary-green;
+      text-align: center;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 2px solid $primary-green;
+
+      &:hover {
+        background-color: $primary-green;
+        color: $pure-white;
+        border: 2px solid $primary-green;
+      }
+    }
+  }
+  // Get license styling ends
+
+  // Services styling starts
+  #services {
+    overflow: hidden;
+
+    .container {
+      .service-card {
+        overflow: hidden;
+        position: relative;
+        border: 0;
+        overflow: hidden;
+
+        .card-head {
+          overflow: hidden;
+
+          &:hover {
+            .card-img-top {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .card-body {
+          padding: 9px 0px 0px 17px;
+
+          .card-title {
+            font-size: 19px;
+            font-weight: 600;
+            text-transform: capitalize;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0px;
+              height: 50%;
+              width: 4px;
+              background-color: $pure-black;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Services styling ends
+
+  // Specials styling starts
+  #specials {
+    background-color: $pure-white;
+    overflow: hidden;
+
+    .container {
+      .col {
+        display: flex;
+        justify-content: center;
+
+        .specials-card {
+          overflow: hidden;
+          border: none;
+          height: 300px;
+          width: 400px;
+
+          img {
+            border-radius: 8px;
+            object-fit: cover;
+            height: 100%;
+          }
+
+          .card-body {
+            border-radius: 8px;
+            padding: 30px;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: $pure-white;
+            text-align: center;
+            flex-direction: column;
+            background-color: $light-black;
+
+            .card-title {
+              text-align: center;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: normal;
+              text-transform: capitalize;
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-weight: 200;
+
+              a {
+                text-decoration: none;
+
+                span {
+                  color: $light-green;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  // Specials styling ends
+
+  //Team styling starts
+  #team {
+    .container-fluid {
+      overflow: hidden;
+      background-color: $section-white;
+
+      .team-left-section {
+        background-color: $pure-black;
+        border-bottom-right-radius: 80px;
+        padding: 80px 35px;
+        color: $background-white;
+        font-style: normal;
+
+        h2 {
+          font-size: 2rem;
+          font-weight: 600;
+          line-height: 40px;
+          text-transform: capitalize;
+          color: $pure-white;
+          text-align: left;
+        }
+      }
+
+      .team-right-section {
+        .swiper {
+          width: 100%;
+          height: 100%;
+
+          .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+
+            img {
+              width: 70%;
+              display: flex;
+              justify-content: center;
+              left: 50%;
+              padding: 30px 0px;
+            }
+          }
+
+          .swiper-pagination-bullet {
+            background: $black;
+          }
+
+          .swiper-pagination-bullet-active {
+            border: 2px solid $grey;
+            background: $pure-white;
+            height: 9px;
+            width: 9px;
+          }
+        }
+      }
+    }
+  }
+  //Team styling ends
+
+  // Testimonials starts
+  #testimonials {
+    .card {
+      border: 0;
+      text-align: center;
+
+      a {
+        text-decoration: none;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        p {
+          color: $grey;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+      }
+
+      .card-footer {
+        background: transparent;
+        margin: 10px 0;
+        border: 0;
+
+        p {
+          color: $text-black;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+        }
+
+        ::after, ::before {
+          content: "-";
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      border: 1px solid $tertiary-green;
+      background: $pure-white;
+      height: 12px;
+      width: 12px;
+    }
+  }
+  // Testimonials ends
+
+  // Memories section starts
+  #memories {
+    overflow: hidden;
+
+    .memories-container {
+      background-color: $pure-black;
+
+      .row:first-child {
+        .supportive-text {
+          color: $pure-white;
+        }
+
+        h2 {
+          color: $pure-white;
+        }
+      }
+
+      .row:nth-child(2) {
+        .col {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        img {
+          border-radius: 8px;
+          width: 100%;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 26px;
+      background-image: url("../images/shapes/scratch-top.svg");
+      background-size: cover;
+      border: 0;
+      transform: translateY(-25px);
+    }
+
+    .points-container {
+      overflow: hidden;
+
+      .img-container {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 300px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 65%;
+          width: 18%;
+          height: 27%;
+          background-image: url("../images/points-section-certificate.webp");
+          background-size: contain;
+          background-repeat: no-repeat;
+          border: 0;
+          transform: translateY(-87px);
+        }
+      }
+
+      .facts-container {
+        img {
+          height: 22px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+
+          li {
+            line-height: 24px;
+            font-size: 18px;
+            font-weight: 600;
+
+            p {
+              font-weight: normal;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Memories section ends
+
+  // FAQ styling starts
+  #faq {
+    overflow: hidden;
+
+    .accordion {
+      .accordion-item {
+        margin: 20px 0;
+        border-radius: 8px;
+        background: $pure-white;
+        box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
+
+        .accordion-header {
+          font-size: 16px;
+          border-radius: 8px;
+          background: $pure-white;
+
+          .accordion-button {
+            &:not(.collapsed) {
+              background-color: $pure-white;
+              box-shadow: none;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+
+              .accordion-header {
+                box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
+              }
+            }
+
+            &:is(.collapsed) {
+              border-radius: 8px;
+
+              .accordion-header {
+                box-shadow: none;
+              }
+            }
+          }
+        }
+        .accordion-body {
+          font-size: 14px;
+          color: $grey;
+        }
+      }
+    }
+  }
+  // FAQ styling ends
+}
+/*===========================================================================
+HOME PAGE ENDS
+=============================================================================*/
+
+/*===========================================================================
+TOUR PAGE STARTS
+=============================================================================*/
+#tourPage {
+    // Pearl styling starts
+    #pearl {
+      .container {
+        .tour-card {
+        border: 0;
+
+        .card-head {
+          overflow: hidden;
+
+          &:hover {
+            .card-img-top {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .card-body {
+          padding: 14px 3px;
+
+          .card-title {
+            font-size: 19px;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin: 0px 0 0px 0;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              height: 1px;
+              width: 50px;
+              background-color: $pure-black;
+              transform: translateY(-6px);
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Pearl styling ends
+
+  // Vietnam styling starts
+  #vietnam {
+    overflow: hidden;
+
+    .container {
+      .tour-card {
+        overflow: hidden;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card-head {
+          overflow: hidden;
+
+          &:hover {
+            .card-img-top {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .card-img-top {
+          min-height: 200px;
+          object-fit: cover;
+          border-radius: 2;
+        }
+
+        .card-body {
+          .card-title {
+            font-size: 19px;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin: 0px 0 0px 0;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              height: 1px;
+              width: 50px;
+              background-color: $pure-black;
+              transform: translateY(-6px);
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Vietnam styling ends
+
+  // Our fleet styling starts
+  #ourFleet {
+    overflow: hidden;
+    h2 {
+      font-size: 30px;
+      line-height: 46px;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 25px;
+        margin: 0 auto;
+        background-image: url("../images/icons/decorator.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translateY(-5px);
+      }
+    }
+    .container {
+      .fleet-card {
+        overflow: hidden;
+        border: none;
+
+        .card-head {
+          overflow: hidden;
+
+          &:hover {
+            .card-img-top {
+              transform: scale(1.1);
+            }
+          }
+
+          .card-img-top {
+            min-height: 200px;
+            object-fit: cover;
+            border-radius: 2;
+          }
+        }
+
+        .card-body {
+          .card-title {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 21.825px;
+            margin: 10px 0 15px 0;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              height: 1px;
+              width: 30px;
+              background-color: $pure-black;
+              transform: translateY(-6px);
+              margin-right: 10px;
+            }
+          }
+
+          table {
+            td {
+              color: $text-black;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              padding-bottom: 10px;
+            }
+
+            img {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  // Our fleet styling ends
+
+/*===========================================================================
+TOUR PAGE ENDS
+=============================================================================*/
+
+/*===========================================================================
+GALLERY PAGE STARTS
+=============================================================================*/
+#galleryPage {
+  // Gallery page styling starts
+  #galleryContent {
+    overflow: hidden;
+
+    img {
+      border-radius: 12px;
+
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+  // Gallery page styling ends
+}
+/*===========================================================================
+GALLERY PAGE ENDS
+=============================================================================*/
+
+/*===========================================================================
+ABOUT PAGE STARTS
+=============================================================================*/
+#aboutPage {
+  #aboutContent {
+    overflow: hidden;
+  }
+}
+/*===========================================================================
+ABOUT PAGE ENDS
+=============================================================================*/
+
+/*===========================================================================
+CONTACT PAGE STARTS
+=============================================================================*/
+#contactPage {
+  // Contact stylings starts
+  #contactContent {
+    overflow: hidden;
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // Contact stylings ends
+}
+/*===========================================================================
+CONTACT PAGE ENDS
+=============================================================================*/
+
+/*===========================================================================
+LICENSE PAGE STARTS
+=============================================================================*/
+#licensePage {
+  // License styling starts
+  #applyForLicenseInfo {
+    overflow: hidden;
+  }
+  // License styling ends
+}
+/*===========================================================================
+LICENSE PAGE ENDS
+=============================================================================*/
+
+// Footer styling starts
+footer {
+  background-color: $pure-black;
+  color: $pure-white;
+
+  .row {
+    &:first-child {
+      padding: 50px 0 50px 0;
+      border-bottom: 1px solid #333935;
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 2.4rem;
+        }
+
+        span {
+          color: $brand-yellow;
+        }
+      }
+
+      h6 {
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 22px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        color: $background-white;
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+          font-style: normal;
+          font-weight: 400;
+          line-height: 35px;
+          font-size: 15px;
+
+          a {
+            color: $pure-white;
+            text-decoration: none;
+          }
+        }
+      }
+
+      #footer-social-list {
+        li {
+          a {
+            display: flex;
+            width: 37px;
+            height: 37px;
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid $black;
+            background: $background-black;
+            color: $light-grey;
+          }
+        }
+      }
+
+      #footer-contact-list {
+        li {
+          a {
+            color: $pure-white;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      p {
+        color: $background-white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+
+        a {
+          color: $pure-white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+// Footer styling ends

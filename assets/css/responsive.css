@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
+@media (min-width: 768px) {
+  header .navbar .offcanvas .offcanvas-body .navbar-nav {
+    line-height: initial;
+  }
+  header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
+    margin: 0px 7px;
+  }
+  header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
+    font-size: 12px;
+  }
+  header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:first-child {
+    margin-left: 0;
+  }
+  header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+  #homeHero h1 {
+    font-size: 35px;
+  }
+  #homeHero::after {
+    background-size: contain;
+  }
+  #tourPage #hero img {
+    -o-object-position: 0 -45px;
+       object-position: 0 -45px;
+  }
+  #tourPage #ourFleet .col .fleet-card {
+    width: 100%;
+  }
+  #galleryPage #galleryContent .gallery-card {
+    overflow: hidden;
+    border: none;
+    height: 100%;
+  }
+  #galleryPage #galleryContent .gallery-card img {
+    border-radius: 3px;
+    height: 100%;
+  }
+  #homePage #welcome .welcome-intro h2 {
+    line-height: 50px;
+    font-size: 45px;
+  }
+  #homePage #welcome .welcome-details {
+    padding: 60px;
+  }
+  #homePage #booking form #requiredVehicles .form-check {
+    flex: 3 33.33%;
+  }
+  #homePage #team .container-fluid .team-right-section .specials .swiper-slide img {
+    display: flex;
+    justify-content: center;
+  }
+  #homePage #team .container-fluid .team-right-section .specials .swiper-pagination {
+    padding: 28px;
+  }
+  #homePage #memories .points-container .img-container img {
+    width: 55%;
+  }
+  #homePage #memories .points-container .img-container::before {
+    left: 61%;
+    width: 12%;
+    top: 32%;
+  }
+}
+@media (min-width: 992px) {
+  p, a, ul, li {
+    font-size: 16px;
+  }
+  #hero h1 {
+    font-size: 63px;
+  }
+  header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
+    margin: 0 8px;
+  }
+  header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+  #homeHero h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  #homeHero p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #homePage #hero {
+    height: 350px;
+  }
+  #homePage #hero .hero-content h1 {
+    font-size: 50px;
+  }
+  #homePage #memories .points-container .img-container img {
+    width: 450px;
+  }
+  #homePage #memories .points-container .img-container::before {
+    left: 64%;
+    width: 24%;
+    top: 28%;
+  }
+  #homePage #specials .container-fluid .square-section .square-section-content {
+    padding: 110px 75px;
+  }
+  #galleryPage #galleryPage #hero img {
+    -o-object-position: 0 -160px;
+       object-position: 0 -160px;
+  }
+  #team .container-fluid .team-right-section .specials .swiper-slide img {
+    display: flex;
+    justify-content: center;
+    padding: 2px 54px;
+  }
+  footer .row:first-child h6 {
+    font-size: 22px;
+  }
+  footer .row:first-child p {
+    font-size: 18px;
+  }
+  footer .row:first-child #footer-social-list li a {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
+    margin: 0 12px;
+  }
+  #memories .points-container .img-container::before {
+    left: 65%;
+  }
+  #specials .container-fluid .square-section .square-section-content {
+    padding: 140px 150px;
+  }
+  #specials .container-fluid .square-section h4 {
+    font-size: 40px;
+  }
+  #specials .container-fluid .square-section p {
+    font-size: 16px;
+  }
+  #tourPage #hero img {
+    -o-object-position: 0 -135px;
+       object-position: 0 -135px;
+  }
+  #ourFleet .col .fleet-card {
+    width: 100%;
+  }
+  #galleryPage #galleryPage #hero img {
+    -o-object-position: 0 -360px;
+       object-position: 0 -360px;
+  }
+}
+@media (min-width: 1400px) {
+  #homePage #homeHero h1 {
+    font-size: 57px;
+    line-height: 65px;
+  }
+  #homePage #homeHero p {
+    font-size: 20px;
+    line-height: 29px;
+  }
+  #homePage #welcome .welcome-intro {
+    padding: 100px;
+  }
+  #homePage #welcome .welcome-details {
+    padding: 100px;
+  }
+  #homePage #specials .container .col .specials-card {
+    height: 350px;
+  }
+  #homePage #team .container-fluid .team-left-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 90px;
+  }
+  #homePage #team .container-fluid .team-left-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 53px;
+  }
+  #homePage #team .container-fluid .team-right-section .specials .swiper-slide img {
+    display: flex;
+    justify-content: center;
+    padding: 50px 100px;
+  }
+  #homePage #team .container-fluid .team-right-section .specials .swiper-pagination {
+    padding: 19px;
+  }
+  #homePage #memories .col img {
+    width: 64%;
+  }
+  #homePage #memories .points-container .img-container img {
+    width: 80%;
+  }
+  #homePage #memories .points-container .img-container::before {
+    left: 68%;
+    width: 20%;
+  }
+  #homePage #memories .points-container .facts-container ul li {
+    font-size: 20px;
+  }
+  #homePage #memories .points-container .facts-container ul li p {
+    font-size: 16px;
+  }
+  #tourPage #ourFleet .col {
+    padding: 25px 20px 20px 20px;
+  }
+  #tourPage #ourFleet .col .fleet-card .card-body .card-title {
+    font-size: 22px;
+  }
+  #tourPage #ourFleet .col .fleet-card .card-body table td {
+    font-size: 17px;
+  }
+  #galleryPage #galleryContent .gallery-card {
+    overflow: hidden;
+    border: none;
+    height: 100%;
+  }
+  #galleryPage #galleryContent .gallery-card img {
+    border-radius: 3px;
+    height: 100%;
+  }
+  #licensePage #applyForLicenseInfo img {
+    width: 61%;
+  }
+}/*# sourceMappingURL=responsive.css.map */

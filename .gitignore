@@ -1,0 +1,8 @@
+# Composer
+/vendor/
+
+# Node Modules
+/node_modules/
+
+# Error log
+error.log
