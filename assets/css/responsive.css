@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @media (min-width: 768px) {
   .heading {
     font-size: 34px !important;
@@ -33,5 +33,8 @@
   #homePage #homeHero .homehero-content p {
     font-size: 18px;
     line-height: 30px;
+  }
+  #homePage #beauty-of-srilanka .heading {
+    font-size: 44px !important;
   }
 }/*# sourceMappingURL=responsive.css.map */

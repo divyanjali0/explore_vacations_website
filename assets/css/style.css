@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   transition: transform 0.3s ease-in-out;
 }
@@ -212,6 +212,8 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-weight: 700;
   color: #0060a6;
   margin-bottom: 0;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 12px;
 }
 #homePage #service-counter .service-counter-wrapper .counter-item .counter-label {
   font-size: 1.1rem;
@@ -233,6 +235,45 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-size: 18px;
   text-align: center;
   font-weight: 500;
+}
+#homePage #beauty-of-srilanka img {
+  height: 26rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#homePage #beauty-of-srilanka .image-overlay {
+  position: relative;
+}
+#homePage #beauty-of-srilanka .image-overlay .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+#homePage #beauty-of-srilanka .image-overlay .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+#homePage #beauty-of-srilanka .image-overlay .overlay-text .heading {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  font-family: "Quintessential", cursive;
+  color: #ffffff;
+  font-size: 34px;
+}
+#homePage #beauty-of-srilanka .image-overlay .overlay-text .btn {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 0;
+  padding: 10px 16px;
+  font-size: 16px;
 }
 
 #whatsapp-widget .chat-header,

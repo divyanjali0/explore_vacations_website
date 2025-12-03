@@ -213,6 +213,26 @@
     </section>
     <!-- Trending Destinations section ends -->
 
+    <!-- Beauty of Srilanka section starts -->
+    <section id="beauty-of-srilanka" class="py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col px-0">
+                    <div class="image-overlay">
+                        <img src="assets/images/beauty-srilanka.png" alt="Beauty of Srilanka" class="img-fluid w-100">
+                        <div class="overlay"></div> 
+                        <div class="overlay-text">
+                            <h2 class="heading">Journey Through Sri Lanka</h2>
+                            <a href="#" class="btn btn-primary mt-3">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Beauty of Srilanka section ends -->
+
+
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
     <!-- Footer ends -->
