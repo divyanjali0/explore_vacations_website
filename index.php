@@ -77,6 +77,33 @@
     </section>
     <!-- Home hero ends -->
 
+    <!-- Why choose us section starts -->
+     <section id="why-choose-us" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body" data-aos="fade-up" data-aos-duration="1000">
+                            <h2 class="heading">Why Choose Us?</h2>
+                            <p class="supportive-text">At Explore Vacations, we are passionate about creating unforgettable travel experiences. Here’s why you should choose us for your next adventure:</p> 
+                            <ul class="list-unstyled">
+                                <li><img src="assets/images/icons/map-marked.svg" class="img-fluid" alt="map-marked"> <p><b>Personalized Itineraries :</b> We tailor each trip to your preferences, ensuring a unique and memorable experience.</p></li>
+                                <li><img src="assets/images/icons/user-tie.svg" class="img-fluid" alt="user-tie"> <p><b>Expert Guides :</b> Our knowledgeable guides provide insights and local expertise to enrich your journey.</p></li>
+                                <li><img src="assets/images/icons/headset.svg" class="img-fluid" alt="headset"> <p><b>24/7 Support :</b> We are available around the clock to assist you during your travels.</p></li>
+                                <li><img src="assets/images/icons/dollar-sign.svg" class="img-fluid" alt="dollar-sign"> <p><b>Best Price Guarantee :</b> We offer competitive pricing without compromise.</p></li>
+                                <li><img src="assets/images/icons/leaf.svg" class="img-fluid" alt="leaf"> <p><b>Commitment to Sustainability :</b> We prioritize eco-friendly practices to preserve the beauty of our destinations.</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center mt-3 mt-md-0" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="assets/images/why-choose-us-img.jpg" alt="Why Choose Us" class="img-fluid why-choose-us-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why choose us section ends -->
+
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
     <!-- Footer ends -->

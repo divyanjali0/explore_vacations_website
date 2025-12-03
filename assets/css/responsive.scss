@@ -6,6 +6,10 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .heading {
+    font-size: 34px !important;
+  }
+  
   #homePage {
     #homeHero {
       .homeHeroSwiper {

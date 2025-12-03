@@ -1,10 +1,30 @@
-@import url("https://use.typekit.net/zhg1qdc.css");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 * {
   transition: transform 0.3s ease-in-out;
 }
 
 p, a, ul, li {
   font-size: 14px;
+}
+
+.heading {
+  color: #0060a6;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.supportive-text {
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 28px;
+  text-transform: capitalize;
+  margin-bottom: 16px;
 }
 
 header {
@@ -48,7 +68,7 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
   margin: 0;
 }
 header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
-  font-family: "Cambria";
+  font-family: "Libre Baskerville", serif;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -142,6 +162,33 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   background-color: #0060a6;
   color: #ffffff;
   border: 1.475px solid #0060a6;
+}
+#homePage #why-choose-us {
+  overflow: hidden;
+}
+#homePage #why-choose-us .card {
+  background-color: rgba(159, 159, 189, 0.1019607843);
+  border: 0;
+}
+#homePage #why-choose-us .card ul li {
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+#homePage #why-choose-us .card ul li img {
+  width: 30px;
+  margin-right: 15px;
+}
+#homePage #why-choose-us .card ul li p {
+  margin-bottom: 0;
+}
+#homePage #why-choose-us .why-choose-us-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#homePage #why-choose-us .why-choose-us-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
 
 #whatsapp-widget .chat-header,
