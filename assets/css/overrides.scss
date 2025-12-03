@@ -1,13 +1,13 @@
 @import 'variables';
 
-*{
-    font-family: $font-primary;
+* {
+    font-family: $font-secondary;
 }
 
 .active::after {
     content: '';
     display: block;
-    border-bottom: 2px solid $brand-yellow;
+    border-bottom: 2px solid $color-primary;
 }
 
 form {
@@ -35,11 +35,11 @@ form {
     }
 
     input[type="submit"] {
-        border: 2px solid $primary-green;
-        background: $primary-green;
+        border: 2px solid $color-primary;
+        background: $color-primary;
         padding: 5px 10px;
         text-decoration: none;
         text-transform: uppercase;
-        color: $pure-white;
+        color: $color-white;
     }
 }

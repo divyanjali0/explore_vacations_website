@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   transition: transform 0.3s ease-in-out;
 }
@@ -11,10 +11,11 @@ p, a, ul, li {
   color: #0060a6;
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 40px;
   text-transform: capitalize;
   margin-bottom: 16px;
+  font-family: "Playfair Display", serif;
 }
 
 .supportive-text {
@@ -68,7 +69,7 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
   margin: 0;
 }
 header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Playfair Display", serif;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -132,10 +133,11 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   text-align: center;
   font-size: 30px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: capitalize;
   line-height: 42px;
   margin: 0;
+  font-family: "Playfair Display", serif;
 }
 #homePage #homeHero .homehero-content p {
   text-align: center;
@@ -216,6 +218,21 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   color: #000000;
   font-weight: 500;
   margin-bottom: 0;
+}
+#homePage #trending-destinations {
+  overflow: hidden;
+}
+#homePage #trending-destinations .destination-item img {
+  width: 160px;
+  border-radius: 50%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#homePage #trending-destinations .destination-item .destination-name {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
 }
 
 #whatsapp-widget .chat-header,

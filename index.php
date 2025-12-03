@@ -84,7 +84,7 @@
                 <div class="col-12 col-md-6">
                     <div class="card">
                         <div class="card-body" data-aos="fade-up" data-aos-duration="1000">
-                            <h2 class="heading">Why Choose Us?</h2>
+                            <h2 class="heading mb-4">Why Choose Us?</h2>
                             <p class="supportive-text">At Explore Vacations, we are passionate about creating unforgettable travel experiences. Here’s why you should choose us for your next adventure:</p> 
                             <ul class="list-unstyled">
                                 <li><img src="assets/images/icons/map-marked.svg" class="img-fluid" alt="map-marked"> <p><b>Personalized Itineraries :</b> We tailor each trip to your preferences, ensuring a unique and memorable experience.</p></li>
@@ -111,7 +111,7 @@
                     <div class="service-counter-wrapper d-flex flex-column flex-md-row justify-content-around align-items-center">
                         <div class="counter-item text-center" data-aos="fade-up" data-aos-duration="1000">
                             <h2 class="counter-number">500+</h2>
-                            <p class="counter-label">Happy Travelers</p>
+                            <p class="counter-label">Happy Travellders</p>
                         </div>
                         <div class="counter-item text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                             <h2 class="counter-number">150+</h2>
@@ -132,6 +132,86 @@
     </section>
     <!-- Service Counter section ends -->
 
+    <!-- Trending Destinations section starts -->
+     <section id="trending-destinations" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="heading text-center">Trending Destinations</h2>
+                </div>
+            </div>
+            <div class="swiper myDestinationsSwiper mt-3">
+                <div class="swiper-wrapper" data-aos="zoom-in" data-aos-duration="1000">
+
+                    <!-- Sigiriya -->
+                    <div class="swiper-slide">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/1.jpg" alt="Sigiriya" class="img-fluid">
+                            <h3 class="destination-name mt-2">Sigiriya</h3>
+                        </div>
+                    </div>
+
+                    <!-- Kandy -->
+                    <div class="swiper-slide">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/2.jpg" alt="Kandy" class="img-fluid">
+                            <h3 class="destination-name mt-2">Kandy</h3>
+                        </div>
+                    </div>
+
+                    <!-- Mirissa -->
+                    <div class="swiper-slide">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/3.jpg" alt="Mirissa" class="img-fluid">
+                            <h3 class="destination-name mt-2">Mirissa</h3>
+                        </div>
+                    </div>
+
+                    <!-- Jaffna -->
+                    <div class="swiper-slide">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/4.jpg" alt="Jaffna" class="img-fluid">
+                            <h3 class="destination-name mt-2">Jaffna</h3>
+                        </div>
+                    </div>
+
+                    <!-- Galle -->
+                    <div class="swiper-slide">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/5.jpg" alt="Galle" class="img-fluid">
+                            <h3 class="destination-name mt-2">Galle</h3>
+                        </div>
+                    </div>
+
+                    <!-- Ella -->
+                    <div class="swiper-slide">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/6.jpg" alt="Ella" class="img-fluid">
+                            <h3 class="destination-name mt-2">Ella</h3>
+                        </div>
+                    </div>
+
+                    <!-- Nuwara Eliya -->
+                    <div class="swiper-slide">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/7.jpg" alt="Nuwara Eliya" class="img-fluid">
+                            <h3 class="destination-name mt-2">Nuwara Eliya</h3>
+                        </div>
+                    </div>
+
+                    <!-- Trincomalee -->
+                    <div class="swiper-slide mb-4">
+                        <div class="destination-item text-center">
+                            <img src="assets/images/trending-destinations/8.jpg" alt="Trincomalee" class="img-fluid">
+                            <h3 class="destination-name mt-2">Trincomalee</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Trending Destinations section ends -->
 
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
@@ -162,6 +242,28 @@
         });
     </script>
 
+    <script>
+        var swiper = new Swiper(".myDestinationsSwiper", {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
 
+            autoplay: {
+                delay: 2000,     
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                576: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                992: { slidesPerView: 6 },
+            }
+        });
+    </script>
 </body>
 </html>

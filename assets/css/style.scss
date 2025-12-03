@@ -12,10 +12,11 @@ p, a, ul, li {
   color: $color-primary;
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 40px;
   text-transform: capitalize;
   margin-bottom: 16px;
+  font-family: $font-primary;
 }
 
 .supportive-text {
@@ -158,10 +159,11 @@ header {
         text-align: center;
         font-size: 30px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: capitalize;
         line-height: 42px;
         margin: 0;
+        font-family: $font-primary;
       }
 
       p {
@@ -260,6 +262,25 @@ header {
           font-weight: 500;
           margin-bottom: 0;
         }
+      }
+    }
+  }
+
+  #trending-destinations {
+    overflow: hidden;
+
+    .destination-item {
+      img {
+        width: 160px;
+        border-radius: 50%;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .destination-name {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
       }
     }
   }
