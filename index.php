@@ -81,7 +81,7 @@
      <section id="why-choose-us" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 d-flex align-items-center">
                     <div class="card">
                         <div class="card-body" data-aos="fade-up" data-aos-duration="1000">
                             <h2 class="heading mb-4">Why Choose Us?</h2>
@@ -93,7 +93,7 @@
                                 <li><img src="assets/images/icons/dollar-sign.svg" class="img-fluid" alt="dollar-sign"> <p><b>Best Price Guarantee :</b> We offer competitive pricing without compromise.</p></li>
                                 <li><img src="assets/images/icons/leaf.svg" class="img-fluid" alt="leaf"> <p><b>Commitment to Sustainability :</b> We prioritize eco-friendly practices to preserve the beauty of our destinations.</p></li>
                             </ul>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="col-12 col-md-6 d-flex align-items-center mt-3 mt-md-0" data-aos="fade-left" data-aos-duration="1000">

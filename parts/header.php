@@ -1,12 +1,12 @@
 <header>
     <!-- Navbar starts-->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg p-lg-0">
         <div class="container">
             <a class="navbar-brand" href="./">
-                <!-- <img src="assets/images/logo.png" alt="Explore Vacations | Logo" class="d-none d-lg-inline"> -->
-                <span>
+                <img src="assets/images/logo.png" alt="Explore Vacations | Logo" class="d-none d-lg-inline">
+                <!-- <span>
                     Explore Vacations
-                </span>
+                </span> -->
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
