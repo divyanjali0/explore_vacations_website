@@ -358,7 +358,7 @@
                     <div class="swiper-slide">
                         <div class="card h-100">
                             <img src="assets/images/featured-trips/<?php echo $tour['image']; ?>" alt="<?php echo htmlspecialchars($tour['name']); ?>" class="img-fluid">
-                            <div class="card-body">
+                            <div class="card-body" style="height: 200px;">
                                 <h3 class="card-title"><?php echo htmlspecialchars($tour['name']); ?></h3>
                                 <p class="card-text"><?php echo htmlspecialchars($tour['description']); ?></p>
                                 <hr class="mt-1">
