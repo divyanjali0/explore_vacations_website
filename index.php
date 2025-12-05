@@ -357,17 +357,16 @@
                     <?php foreach($tours as $tour): ?>
                     <div class="swiper-slide">
                         <div class="card h-100">
-                        <img src="assets/images/featured-trips/<?php echo $tour['image']; ?>" 
-                            alt="<?php echo htmlspecialchars($tour['name']); ?>" class="img-fluid">
-                        <div class="card-body">
-                            <h3 class="card-title"><?php echo htmlspecialchars($tour['name']); ?></h3>
-                            <p class="card-text"><?php echo htmlspecialchars($tour['description']); ?></p>
-                            <hr class="mt-1">
-                            <div class="d-flex justify-content-between">
-                            <span><?php echo $tour['days']; ?> Days</span>
-                            <span><?php echo $tour['reviews']; ?> ★ (<?php echo $tour['reviews']; ?> reviews)</span>
+                            <img src="assets/images/featured-trips/<?php echo $tour['image']; ?>" alt="<?php echo htmlspecialchars($tour['name']); ?>" class="img-fluid">
+                            <div class="card-body">
+                                <h3 class="card-title"><?php echo htmlspecialchars($tour['name']); ?></h3>
+                                <p class="card-text"><?php echo htmlspecialchars($tour['description']); ?></p>
+                                <hr class="mt-1">
+                                <div class="d-flex justify-content-between">
+                                    <span><?php echo $tour['days']; ?> Days</span>
+                                    <span><?php echo $tour['reviews']; ?> ★ (<?php echo $tour['reviews']; ?> reviews)</span>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                     <?php endforeach; ?>
