@@ -275,6 +275,36 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   padding: 10px 16px;
   font-size: 16px;
 }
+#homePage #book-your-trip {
+  overflow: hidden;
+}
+#homePage #book-your-trip span {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Quintessential", cursive;
+}
+#homePage #book-your-trip ul li {
+  margin-left: 12px;
+}
+#homePage #book-your-trip ul li h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+#homePage #book-your-trip ul li p {
+  margin-bottom: 0;
+  color: #414141;
+  margin-top: 4px;
+}
+#homePage #book-your-trip .beauty-srilanka {
+  border-radius: 26px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#homePage #book-your-trip .beauty-srilanka:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,

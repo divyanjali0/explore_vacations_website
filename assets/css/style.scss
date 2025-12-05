@@ -332,6 +332,45 @@ header {
       }
     }
   }
+
+  #book-your-trip {
+      overflow: hidden; 
+
+    span {
+      color: $color-black;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: $font-cursive;
+    }
+
+    ul {
+      li {
+        margin-left: 12px;
+
+        h3 {
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-bottom: 0;
+          color: #414141;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .beauty-srilanka {
+      border-radius: 26px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+      &:hover {
+        transform: scale(1.06);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      }
+    }
+  }
 }
 
 //Whatsapp widget styles starts

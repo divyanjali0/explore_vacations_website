@@ -50,6 +50,15 @@
   p, a, ul, li {
     font-size: 16px;
   }
+
+  #homePage {
+    #book-your-trip {
+      .heading {
+        font-size: 42px !important;
+        line-height: 50px !important;
+      }
+    }
+  }
 }
 
 // X-Large devices (large desktops, 1200px and up)

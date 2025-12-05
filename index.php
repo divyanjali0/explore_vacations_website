@@ -133,7 +133,7 @@
     <!-- Service Counter section ends -->
 
     <!-- Trending Destinations section starts -->
-     <section id="trending-destinations" class="py-5">
+    <section id="trending-destinations" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -214,7 +214,7 @@
     <!-- Trending Destinations section ends -->
 
     <!-- Beauty of Srilanka section starts -->
-    <section id="beauty-of-srilanka" class="py-5">
+    <section id="beauty-of-srilanka" class="pt-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col px-0">
@@ -231,6 +231,45 @@
         </div>
     </section>
     <!-- Beauty of Srilanka section ends -->
+
+    <!-- Book your trip section starts -->
+    <section id="book-your-trip" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <span>Easy and Fast</span>
+                    <h2 class="heading" data-aos="fade-up" data-aos-duration="1000">Book your next trip <br> in 3 easy steps</h2>
+                    <ul class="list-unstyled mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="assets/images/icons/destinations.svg" alt="Choose Destination" class="img-fluid">
+                            <li>
+                                <h3>Choose Destination</h3>
+                                <p>Whether you love beaches, mountains, or cities—choose the destination that excites you.</p>
+                            </li>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="assets/images/icons/payment.svg" alt="Choose Payment" class="img-fluid">
+                            <li>
+                                <h3>Plan Your Itinerary</h3>
+                                <p>Customize your trip schedule to match your interests and travel style</p>
+                            </li>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/icons/travel.svg" alt="Reach Airport on Selected Date" class="img-fluid">
+                            <li>
+                                <h3>Begin Your Adventure</h3>
+                                <p>Experience the beauty and excitement of your chosen destination to the fullest.</p>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 mt-3 mt-md-0 d-flex justify-content-center align-items-center">
+                    <img src="assets/images/book-trip.png" alt="Book your trip" class="img-fluid beauty-srilanka" data-aos="fade-left" data-aos-duration="1000">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Book your trip section ends -->
 
 
     <!-- Footer starts -->
