@@ -47,7 +47,7 @@
 }
 
 @media (min-width: 992px) {
-  p, a, ul, li {
+  p, a, ul, li, span {
     font-size: 16px;
   }
 
@@ -56,6 +56,14 @@
       .heading {
         font-size: 42px !important;
         line-height: 50px !important;
+      }
+    }
+
+    #featured-trips {
+      .card {
+        .card-title {
+          font-size: 20px;
+        }
       }
     }
   }

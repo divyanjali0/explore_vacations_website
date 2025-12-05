@@ -1,6 +1,12 @@
 <?php
     include ('./config.php');
+    include 'assets/includes/db_connect.php';
+
+    $stmt = $conn->query("SELECT * FROM tours ORDER BY id ASC");
+    $tours = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -338,6 +344,39 @@
     </section>
     <!-- Popular things to do section ends -->
 
+    <!-- Featured Trips section starts -->
+    <section id="featured-trips" class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="heading text-center">Featured Trips</h2>
+                </div>
+            </div>
+            <div class="swiper featured-tours-swiper">
+                <div class="swiper-wrapper mb-5">
+                    <?php foreach($tours as $tour): ?>
+                    <div class="swiper-slide">
+                        <div class="card h-100">
+                        <img src="assets/images/featured-trips/<?php echo $tour['image']; ?>" 
+                            alt="<?php echo htmlspecialchars($tour['name']); ?>" class="img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title"><?php echo htmlspecialchars($tour['name']); ?></h3>
+                            <p class="card-text"><?php echo htmlspecialchars($tour['description']); ?></p>
+                            <hr class="mt-1">
+                            <div class="d-flex justify-content-between">
+                            <span><?php echo $tour['days']; ?> Days</span>
+                            <span><?php echo $tour['reviews']; ?> ★ (<?php echo $tour['reviews']; ?> reviews)</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Trips section ends -->
 
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
@@ -391,5 +430,27 @@
             }
         });
     </script>
+
+    <script>
+       const slwiper = new Swiper('.featured-tours-swiper', {
+            slidesPerView: 1,      
+            spaceBetween: 20,   
+            loop: true,          
+            autoplay: {           
+                delay: 3000,       
+                disableOnInteraction: false, 
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1200: { slidesPerView: 4 },
+            },
+        });
+    </script>
+
 </body>
 </html>
