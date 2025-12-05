@@ -271,6 +271,70 @@
     </section>
     <!-- Book your trip section ends -->
 
+    <!-- Popular things to do section starts -->
+    <section id="popular-things-to-do" class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="heading text-center">Popular Things to Do</h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Item -->
+                <div class="col-12 col-md-4">
+                    <div class="popular-card">
+                        <img src="assets/images/popular/1.jpg" alt="Safari">
+                        <div class="overlay"></div>
+                        <span class="title">Safari</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="popular-card">
+                        <img src="assets/images/popular/2.jpg" alt="Visiting Temples">
+                        <div class="overlay"></div>
+                        <span class="title">Visiting Temples</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="popular-card">
+                        <img src="assets/images/popular/3.jpg" alt="Tea plantation tours">
+                        <div class="overlay"></div>
+                        <span class="title">Tea Plantation Tours</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="popular-card">
+                        <img src="assets/images/popular/4.jpg" alt="Train rides">
+                        <div class="overlay"></div>
+                        <span class="title">Train Rides</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="popular-card">
+                        <img src="assets/images/popular/5.jpg" alt="Rafting">
+                        <div class="overlay"></div>
+                        <span class="title">Rafting</span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="popular-card">
+                        <img src="assets/images/popular/6.jpg" alt="Shopping">
+                        <div class="overlay"></div>
+                        <span class="title">Shopping</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Popular things to do section ends -->
+
 
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>

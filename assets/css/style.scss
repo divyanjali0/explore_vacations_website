@@ -371,6 +371,54 @@ header {
       }
     }
   }
+
+  #popular-things-to-do {
+    .popular-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: transform 0.4s ease;
+      }
+
+      // Overlay
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); 
+        transition: background 0.4s ease;
+        border-radius: 16px;
+      }
+
+      &:hover img {
+        transform: scale(1.08);
+      }
+
+      &:hover .overlay {
+        background: rgba(0, 0, 0, 0.1); // lighter on hover if you like
+      }
+
+      .title {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-shadow: 0px 2px 6px rgba(0,0,0,0.5);
+        z-index: 2; // make sure text is above overlay
+      }
+    }
+  }
 }
 
 //Whatsapp widget styles starts
