@@ -281,55 +281,58 @@
             </div>
 
             <div class="row g-4">
-                <!-- Item -->
+                <!-- Left column: 2 stacked images -->
                 <div class="col-12 col-md-4">
+                    <div class="popular-card mb-4">
+                    <img src="assets/images/popular/1.jpg" alt="Safari">
+                    <div class="overlay"></div>
+                    <span class="title">Safari</span>
+                    </div>
                     <div class="popular-card">
-                        <img src="assets/images/popular/1.jpg" alt="Safari">
-                        <div class="overlay"></div>
-                        <span class="title">Safari</span>
+                    <img src="assets/images/popular/4.jpg" alt="Train Rides">
+                    <div class="overlay"></div>
+                    <span class="title">Train Rides</span>
                     </div>
                 </div>
 
+                <!-- Center column: single tall image spanning rows naturally -->
                 <div class="col-12 col-md-4">
-                    <div class="popular-card">
-                        <img src="assets/images/popular/2.jpg" alt="Visiting Temples">
-                        <div class="overlay"></div>
-                        <span class="title">Visiting Temples</span>
+                    <div class="popular-card h-100">
+                    <img src="assets/images/popular/2.jpg" alt="Visiting Temples" style="height: 100%; object-fit: cover;">
+                    <div class="overlay"></div>
+                    <span class="title">Visiting Temples</span>
                     </div>
                 </div>
 
+                <!-- Right column: 2 stacked images -->
                 <div class="col-12 col-md-4">
-                    <div class="popular-card">
-                        <img src="assets/images/popular/3.jpg" alt="Tea plantation tours">
-                        <div class="overlay"></div>
-                        <span class="title">Tea Plantation Tours</span>
+                    <div class="popular-card mb-4">
+                    <img src="assets/images/popular/3.jpg" alt="Tea Plantation Tours">
+                    <div class="overlay"></div>
+                    <span class="title">Tea Plantation Tours</span>
                     </div>
-                </div>
+                   <div class="col-12">
+                        <div class="row g-2">
+                            <!-- First image -->
+                            <div class="col-12 col-md-6">
+                            <div class="popular-card">
+                                <img src="assets/images/popular/5.jpg" alt="Rafting">
+                                <div class="overlay"></div>
+                                <span class="title">Rafting</span>
+                            </div>
+                            </div>
 
-                <div class="col-12 col-md-4">
-                    <div class="popular-card">
-                        <img src="assets/images/popular/4.jpg" alt="Train rides">
-                        <div class="overlay"></div>
-                        <span class="title">Train Rides</span>
-                    </div>
+                            <!-- Second image -->
+                            <div class="col-12 col-md-6">
+                            <div class="popular-card">
+                                <img src="assets/images/popular/6.jpg" alt="Shopping">
+                                <div class="overlay"></div>
+                                <span class="title">Shopping</span>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
                 </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="popular-card">
-                        <img src="assets/images/popular/5.jpg" alt="Rafting">
-                        <div class="overlay"></div>
-                        <span class="title">Rafting</span>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="popular-card">
-                        <img src="assets/images/popular/6.jpg" alt="Shopping">
-                        <div class="overlay"></div>
-                        <span class="title">Shopping</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
