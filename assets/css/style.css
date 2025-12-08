@@ -388,6 +388,29 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 #homePage #customer-reviews .active::after {
   border-bottom: 1px solid #ffffff;
 }
+#homePage #travel-articles img {
+  border-radius: 16px;
+  height: 14rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#homePage #travel-articles .card {
+  border: 0;
+}
+#homePage #travel-articles .card .card-body {
+  padding: 0;
+  margin-top: 12px;
+}
+#homePage #travel-articles .card .card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+#homePage #travel-articles .card .btn {
+  color: black;
+  font-weight: 600;
+  background-color: transparent;
+  font-family: "Quintessential", cursive;
+}
 
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,

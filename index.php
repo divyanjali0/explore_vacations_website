@@ -442,6 +442,48 @@
                     <h2 class="heading text-center">Travel Articles</h2>
                 </div>
             </div>
+            <div class="row mt-4 g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="assets/images/festivals/1.jpg" alt="Travel Articles" class="img-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">April 6 2024 | By Test</p>
+                            <h3 class="card-title">Festivals of Sri Lanka: When to Visit for Culture, Rituals & Local Life</h3>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="assets/images/festivals/2.jpg" alt="Travel Articles" class="img-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">April 6 2024 | By Test</p>
+                            <h3 class="card-title">Hidden Cultural Gems: Temples, Forts & Ancient Cities Beyond the Usual</h3>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="assets/images/festivals/3.jpg" alt="Travel Articles" class="img-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">April 6 2024 | By Test</p>
+                            <h3 class="card-title">Tea Country & Colonial Charm: Discovering Hill Country Heritage</h3>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <img src="assets/images/festivals/1.jpg" alt="Travel Articles" class="img-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">April 6 2024 | By Test</p>
+                            <h3 class="card-title">Festivals of Sri Lanka: When to Visit for Culture, Rituals & Local Life</h3>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Travel Articles section ends -->
