@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 // Fonts
 $font-primary: 'Playfair Display', serif;
 $font-secondary: 'Roboto', sans-serif;
 $font-cursive: 'Quintessential', cursive;
+$font-handwriting: 'Shantell Sans', cursive;
 
 // Colors
 $color-primary: #0060a6;
 $color-white: #ffffff;
 $color-black: #000000;
-$light-background-black : rgba(0, 0, 0, 0.5);
+$light-background-black : rgba(0, 0, 0, 0.4);

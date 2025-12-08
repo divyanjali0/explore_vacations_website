@@ -44,11 +44,23 @@
       }
     }
   }
+
+  #aboutPage {
+    .heading {
+      font-size: 30px !important;
+    }
+  }
 }
 
 @media (min-width: 992px) {
   p, a, ul, li, span {
     font-size: 16px;
+  }
+
+  #hero {
+    h1 {
+      font-size: 40px;
+    }
   }
 
   #homePage {
@@ -64,6 +76,18 @@
         .card-title {
           font-size: 20px;
         }
+      }
+    }
+  }
+
+  #aboutPage {
+    #intro-section {
+      .row {
+        padding: 0 12rem;
+      }
+
+      p {
+        line-height: 26px
       }
     }
   }

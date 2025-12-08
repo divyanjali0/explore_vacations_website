@@ -22,6 +22,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="./" page-name="home">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./about" page-name="about">About</a>
+                        </li>
                     </ul>
                 </div>
             </div>
