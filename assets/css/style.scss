@@ -504,6 +504,29 @@ header {
       }
     }
   }
+
+  #get-in-touch {
+    .card {
+      border: 2px solid #08568b;
+      border-radius: 14px;    
+      
+      .btn {
+        color: black;
+        background: transparent;
+        font-weight: 700;
+        border: 2px solid rgb(0, 85, 197);
+      }
+    }
+
+    .hover-zoom {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .hover-zoom:hover {
+        transform: scale(1.04);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 //Whatsapp widget styles starts

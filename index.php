@@ -386,6 +386,36 @@
     </section>
     <!-- Featured Trips section ends -->
 
+    <!--Get in Touch section starts -->
+    <section id="get-in-touch" class="py-5">
+    <div class="container">
+        <div class="row">   
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="1000">
+                                <h2 class="heading mb-3">Looking for a Personalized Trip or Tour ?</h2>
+                                <p class="supportive-text mb-4">
+                                    Tell us about your travel plans, and we’ll create a custom trip just for you. From relaxing holidays to adventure tours, we handle all the details so you can enjoy a smooth and stress-free journey.
+                                </p>
+                                <a href="./contact" class="btn btn-primary" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                    Inquire Now
+                                </a>
+                            </div>
+                            <div class="col-md-6 text-center" data-aos="fade-left" data-aos-duration="1000">
+                                <img src="assets/images/travel-cta.png" alt="Travel" class="img-fluid hover-zoom">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--Get in Touch section ends -->
+
     <!-- Customer Reviews section starts -->
     <section id="customer-reviews" class="pb-5">
         <div class="container text-center">
