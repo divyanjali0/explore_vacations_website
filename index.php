@@ -4,9 +4,18 @@
 
     $stmt = $conn->query("SELECT * FROM tours ORDER BY id ASC");
     $tours = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $apiKey = "AIzaSyBl50Q8W4ZF2_EkOJ1lnRoVxO1IdjIupjM";
+    $placeId = "ChIJpV-pH0vw4joREeE9so6gzEI";
+
+    $url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&fields=name,rating,reviews.author_name,reviews.text,reviews.relative_time_description,reviews.profile_photo_url&key=$apiKey";
+
+    $response = file_get_contents($url);
+    $data = json_decode($response, true);
+
+    $reviews = $data['result']['reviews'] ?? [];
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -377,6 +386,67 @@
     </section>
     <!-- Featured Trips section ends -->
 
+    <!-- Customer Reviews section starts -->
+    <section id="customer-reviews" class="pb-5">
+        <div class="container text-center">
+            <h2 class="heading">What Our Customers Say</h2>
+            <!-- <img src="https://www.bigfootdigital.co.uk/wp-content/uploads/2020/07/image-optimisation-scaled.jpg" alt="Star Rating" class="img-fluid my-3"> -->
+            <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+                    <?php foreach($reviews as $index => $review): ?>
+                        <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                            <div class="review-content">
+                                <img src="<?php echo htmlspecialchars($review['profile_photo_url']); ?>" onerror="this.src='assets/images/default-user.png';" class="mb-3 rounded-circle" width="90" height="90" alt="User Photo">
+                                <!-- Rating Stars -->
+                                <div class="mb-2">
+                                    <?php 
+                                        $rating = isset($review['rating']) ? round($review['rating']) : 0;
+                                        for($i=1; $i<=5; $i++):
+                                            if($i <= $rating):
+                                                echo '<span style="color: #cab449ff;">&#9733;</span>'; 
+                                            else:
+                                                echo '<span style="color: #cab449ff;">&#9733;</span>';
+                                            endif;
+                                        endfor;
+                                    ?>
+                                </div>
+                                <!-- Review Text -->
+                                <?php 
+                                    $full   = $review['text'];
+                                    $short  = substr($full, 0, 220);
+                                    $isLong = strlen($full) > 220;
+                                ?>
+                                <p class="review-text">
+                                    <span class="short-text"><?php echo $short . ($isLong ? "..." : ""); ?></span>
+                                    <?php if ($isLong): ?>
+                                        <span class="full-text d-none"><?php echo $full; ?></span>
+                                        <a href="#" class="read-more text-decoration-none">Read more</a>
+                                    <?php endif; ?>
+                                </p>
+                                <h5 class="mt-3 mb-0"><?php echo ucwords(strtolower($review['author_name'])); ?></h5>
+                                <small class="text-muted"><?php echo $review['relative_time_description']; ?></small>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Customer Reviews section ends -->
+
+    <!-- Travel Articles section starts -->
+    <section id="travel-articles" class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="heading text-center">Travel Articles</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Travel Articles section ends -->
+
+
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
     <!-- Footer ends -->
@@ -451,5 +521,24 @@
         });
     </script>
 
+    <script>
+        document.querySelectorAll('.read-more').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const shortText = this.parentElement.querySelector('.short-text');
+                const fullText = this.parentElement.querySelector('.full-text');
+
+                if (fullText.classList.contains('d-none')) {
+                    fullText.classList.remove('d-none');
+                    shortText.classList.add('d-none');
+                    this.textContent = "Read less";
+                } else {
+                    fullText.classList.add('d-none');
+                    shortText.classList.remove('d-none');
+                    this.textContent = "Read more";
+                }
+            });
+        });
+    </script>
 </body>
 </html>

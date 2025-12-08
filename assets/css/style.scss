@@ -450,6 +450,31 @@ header {
       }
     }
   }
+
+  #customer-reviews {
+    .review-content {
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.7;
+    } 
+
+    .carousel-indicators button {
+      background-color: #888;   
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      margin: 0 5px;
+    }
+
+    .carousel-item.active {
+      border-bottom: 2px solid transparent !important;
+    }
+
+    .active::after {
+        border-bottom: 1px solid $color-white;
+    }
+  }
 }
 
 //Whatsapp widget styles starts

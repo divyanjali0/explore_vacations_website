@@ -369,6 +369,25 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+#homePage #customer-reviews .review-content {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.7;
+}
+#homePage #customer-reviews .carousel-indicators button {
+  background-color: #888;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px;
+}
+#homePage #customer-reviews .carousel-item.active {
+  border-bottom: 2px solid transparent !important;
+}
+#homePage #customer-reviews .active::after {
+  border-bottom: 1px solid #ffffff;
+}
 
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,
