@@ -106,6 +106,29 @@
     </section>
     <!-- Vision mission section ends -->
 
+    <!-- Our Membership section starts -->
+    <section id="our-membership" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="heading text-center mb-4">Our Memberships & Affiliations</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+                    <img src="assets/images/memberships/1.jpg" alt="Membership 1" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+                    <img src="assets/images/memberships/2.jpg" alt="Membership 2" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+                    <img src="assets/images/memberships/3.jpg" alt="Membership 1" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Membership section ends -->
+
 
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
