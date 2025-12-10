@@ -74,8 +74,26 @@
                     <p class="text-center mb-4">Explore Vacations makes your Sri Lanka trip unforgettable. Here are answers to common questions.</p>
                 </div>
             </div>
-            <div class="row mt-2">
-                <div class="col">
+            <div class="row mt-2 mt-lg-4 d-flex align-items-center">
+               <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0 d-flex align-items-center">
+                    <div class="swiper faq-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/faq-1.png" alt="FAQ image 1" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/faq-2.png" alt="FAQ image 2" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/faq-3.png" alt="FAQ image 3" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/faq-4.png" alt="FAQ image 3" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-8">
                     <div class="accordion" id="faqAccordion">
                         <!-- FAQ Item 1 -->
                         <div class="accordion-item">
@@ -181,6 +199,25 @@
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+    const faqSwiper = new Swiper('.faq-swiper', {
+        loop: true,
+        // spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
 </body>
 
 </html>
