@@ -43,6 +43,9 @@
   #aboutPage #intro-section p {
     line-height: 26px;
   }
+  #faqPage #faq-intro p {
+    padding: 0 14rem;
+  }
 }
 @media (min-width: 1200px) {
   #homePage #homeHero .homehero-content h1 {
