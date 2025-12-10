@@ -153,6 +153,19 @@
     </section>
     <!-- FAQ section ends -->
 
+    <!-- Contact section starts -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-column align-items-center">
+                    <h2 class="heading text-center">Contact Us</h2>
+                    <p class="text-center mb-4">Ready to explore the beauty of Sri Lanka? Start your journey with Explore Vacations today <br> and let us help you plan an unforgettable adventure!</p>
+                    <a href="./contact" class="btn btn-primary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section ends -->
 
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
