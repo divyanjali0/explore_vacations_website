@@ -54,7 +54,7 @@
     <!-- Hero ends -->
 
     <!-- Intro section starts -->
-    <section id="intro-section" class="py-5">
+    <section id="intro-section" class="pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -128,6 +128,103 @@
         </div>
     </section>
     <!-- Our Membership section ends -->
+
+    <!-- Hotel Partners section starts -->
+    <section id="hotel-partners" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="heading text-center mb-4">Our Hotel Partners</h2>
+                </div>
+            </div>
+           <div id="hotelPartnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/1.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/2.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/3.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/4.jpg" class="img-fluid" alt=""></div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/5.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/6.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/7.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/8.jpg" class="img-fluid" alt=""></div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/9.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/10.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/11.jpg" class="img-fluid" alt=""></div>
+                            <div class="col-6 col-md-3"><img src="assets/images/hotels/12.jpg" class="img-fluid" alt=""></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hotel Partners section ends -->
+
+    <!-- Our Businesses section starts -->
+    <section id="our-businesses" class="py-5">
+        <div class="container">
+            <h2 class="heading text-center mb-4">Our Businesses</h2>
+
+            <div id="businessCarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#businessCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#businessCarousel" data-bs-slide-to="1"></button>
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner text-center">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-4">
+                                <img src="assets/images/businesses/1.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <img src="assets/images/businesses/2.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <img src="assets/images/businesses/3.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-4">
+                                <img src="assets/images/businesses/4.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <img src="assets/images/businesses/5.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <img src="assets/images/businesses/6.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Businesses section ends -->
 
 
     <!-- Footer starts -->

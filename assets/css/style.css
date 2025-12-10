@@ -457,6 +457,9 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-family: "Shantell Sans", cursive;
   text-align: center;
 }
+#aboutPage #vission-mission {
+  overflow: hidden;
+}
 #aboutPage #vission-mission p {
   text-align: justify;
 }
@@ -469,10 +472,41 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 #aboutPage #vission-mission .active::after {
   border-bottom: 1px solid #ffffff;
 }
+#aboutPage #our-membership {
+  overflow: hidden;
+}
 #aboutPage #our-membership img {
-  height: 6rem;
+  height: 5rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#aboutPage #hotel-partners {
+  overflow: hidden;
+}
+#aboutPage #hotel-partners .active::after {
+  border-bottom: 1px solid #ffffff;
+}
+#aboutPage #hotel-partners img {
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#aboutPage #our-businesses {
+  overflow: hidden;
+}
+#aboutPage #our-businesses .active::after {
+  border-bottom: 1px solid #ffffff;
+}
+#aboutPage #our-businesses img {
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#aboutPage #our-businesses .carousel-indicators {
+  bottom: -42px;
+}
+#aboutPage #our-businesses .carousel-indicators [data-bs-target] {
+  background-color: rgb(4, 103, 131);
 }
 
 #whatsapp-widget .chat-header,

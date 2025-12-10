@@ -565,6 +565,8 @@ header {
   }
 
   #vission-mission {
+    overflow: hidden;
+
     p {
       text-align: justify;
     }
@@ -581,9 +583,45 @@ header {
   }
 
   #our-membership {
+    overflow: hidden;
+
     img {
-      height: 6rem;
+      height: 5rem;
       object-fit: cover;
+    }
+  }
+
+  #hotel-partners {
+    overflow: hidden;
+
+    .active::after {
+      border-bottom: 1px solid $color-white;
+    }
+
+    img {
+      height: 7rem;
+      object-fit: cover;
+    }
+  }
+
+  #our-businesses {
+    overflow: hidden;
+
+    .active::after {
+        border-bottom: 1px solid $color-white;
+    }
+
+    img {
+      height: 7rem;
+      object-fit: cover;
+    }
+
+    .carousel-indicators {
+      bottom: -42px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: rgb(4, 103, 131);
     }
   }
 }
