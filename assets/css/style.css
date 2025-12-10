@@ -509,10 +509,23 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   background-color: rgb(4, 103, 131);
 }
 
+#faqPage #faq-intro {
+  overflow: hidden;
+}
 #faqPage #faq-intro p {
   font-family: "Shantell Sans", cursive;
   font-weight: 500;
   text-align: center;
+}
+#faqPage #faq {
+  overflow: hidden;
+}
+#faqPage #faq p {
+  font-family: "Shantell Sans", cursive;
+  font-weight: 500;
+}
+#faqPage #faq .accordion-button {
+  font-weight: 500;
 }
 
 #whatsapp-widget .chat-header,
