@@ -680,6 +680,27 @@ header {
   }
 }
 
+#contactPage {
+  #contactContent {
+    overflow: hidden;
+
+    .img-container {
+      .img-fluid {
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // Contact stylings ends
+}
+
 //Whatsapp widget styles starts
 #whatsapp-widget {
   .chat-header,

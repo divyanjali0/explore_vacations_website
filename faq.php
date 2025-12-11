@@ -201,23 +201,23 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-    const faqSwiper = new Swiper('.faq-swiper', {
-        loop: true,
-        // spaceBetween: 20,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-    });
-</script>
+        const faqSwiper = new Swiper('.faq-swiper', {
+            loop: true,
+            // spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 </body>
 
 </html>
