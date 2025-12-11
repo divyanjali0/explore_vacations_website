@@ -137,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     <!-- Hero ends -->
 
     <!-- Contact us starts -->
-    <section id="contactContent" class="pt-5">
+    <section id="contactContent" class="py-5 pb-xl-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -221,7 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     </section>
     <!-- Contact us ends -->
 
-    <div>
+    <div style="margin-bottom: -22px;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.971585687321!2d79.87321017581856!3d7.129283315825712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f04b1fa95fa5%3A0x42cca08eb23de111!2sExplore%20Vacations%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1765448477674!5m2!1sen!2slk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 

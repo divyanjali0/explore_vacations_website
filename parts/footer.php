@@ -28,6 +28,18 @@
                     <li>
                         <a href="./">Home</a>
                     </li>
+                    <li>
+                        <a href="./about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="./faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="./blogs">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="./contact">Contact Us</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-12 col-md-6 col-lg-4 order-lg-4">

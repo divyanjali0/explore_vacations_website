@@ -87,7 +87,7 @@ header {
 
             &:hover {
               .nav-link {
-                color: $color-primary;
+                color: $color-white;
 
                 &::after {
                   content: "";
@@ -692,13 +692,19 @@ header {
           transform: scale(1.05);
         }
       }
-      
+
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
   // Contact stylings ends
+}
+
+#blogPage {
+  #blogs {
+    overflow: hidden;
+  }
 }
 
 //Whatsapp widget styles starts

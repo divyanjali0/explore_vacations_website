@@ -29,6 +29,9 @@
                             <a class="nav-link active" href="./faq" page-name="faq">FAQ</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" href="./blogs" page-name="blogs">Blog</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" href="./contact" page-name="contact">Contact</a>
                         </li>
                     </ul>

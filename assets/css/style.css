@@ -74,7 +74,7 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
   text-transform: uppercase;
 }
 header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link {
-  color: #0060a6;
+  color: #ffffff;
 }
 header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link::after {
   content: "";
@@ -566,6 +566,10 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 }
 #contactPage #contactContent .img-container .img-fluid:hover {
   transform: scale(1.05);
+}
+
+#blogPage #blogs {
+  overflow: hidden;
 }
 
 #whatsapp-widget .chat-header,
