@@ -763,6 +763,26 @@ header {
   }
 }
 
+#toursPage {
+  #tour-theme {
+    img {
+      height: 12rem;
+      object-fit: cover;
+    }
+
+    .card {
+      .card-body {
+        .card-title {
+          margin-bottom: 0;
+          font-size: 19px;
+          font-weight: 600;
+          font-family: $font-cursive;
+        }
+      }
+    }
+  }
+}
+
 //Whatsapp widget styles starts
 #whatsapp-widget {
   .chat-header,

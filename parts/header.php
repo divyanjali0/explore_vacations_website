@@ -26,6 +26,9 @@
                             <a class="nav-link active" href="./about" page-name="about">About</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" href="./tours" page-name="tours">Tours</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" href="./faq" page-name="faq">FAQ</a>
                         </li>
                         <li class="nav-item">
