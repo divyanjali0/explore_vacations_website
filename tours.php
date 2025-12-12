@@ -50,6 +50,7 @@
     <!-- Header starts -->
     <?php include 'parts/header.php'; ?>
     <!-- Header ends -->
+
     <!-- Hero starts -->
     <section id="hero">
         <img src="assets/images/tour-hero.jpg" alt="Explore Vacations - Tours">
@@ -60,15 +61,12 @@
     <!-- Hero ends -->
 
     <!-- Tour Theme section starts -->
-
     <section id="tour-theme" class="py-5">
         <div class="container">
-
             <div class="row">
                 <div class="col">
                     <h2 class="heading text-center">Discover Our Tour Themes</h2>
-                    <p class="supportive-text mb-0 text-center">Explore a curated collection of unique travel experiences across Sri Lanka. Whether you seek adventure, culture, wildlife, or relaxation, our tour themes help you find the perfect journey tailored to your interests.
-                    </p>
+                    <p class="supportive-text mb-0 text-center">Select a theme and customize your tour. Explore various options and create a journey that suits your interests, whether it's adventure, culture, wildlife, or relaxation...</p>
                 </div>
             </div>
 

@@ -641,6 +641,18 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-weight: 500;
 }
 
+#toursCustomizePage #customize-tour {
+  overflow: hidden;
+}
+#toursCustomizePage #customize-tour .active::after {
+  border-bottom: 1px solid #ffffff;
+}
+#toursCustomizePage #customize-tour img {
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,
 #whatsapp-widget .message-input {

@@ -50,6 +50,15 @@
       font-size: 30px !important;
     }
   }
+
+  #toursCustomizePage {
+    #customize-tour {
+      img {
+        height: 22rem;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -96,6 +105,14 @@
     #faq-intro {
       p {
         padding: 0 14rem;
+      }
+    }
+  }
+
+  #toursPage {
+    #tour-theme {
+      .supportive-text {
+        padding: 0 12%;
       }
     }
   }

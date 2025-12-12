@@ -799,6 +799,21 @@ header {
   }
 }
 
+#toursCustomizePage {
+  #customize-tour {
+    overflow: hidden;
+
+    .active::after {
+      border-bottom: 1px solid $color-white;
+    }
+
+    img {
+      height: 12rem;
+      object-fit: cover;
+    }
+  }
+}
+
 //Whatsapp widget styles starts
 #whatsapp-widget {
   .chat-header,
