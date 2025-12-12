@@ -80,7 +80,7 @@
                                 <p class="card-text">
                                     A look into traditional dances, festivals, and heritage sites across the island.
                                 </p>
-                                <a href="#" class="btn btn-primary">View More</a>
+                                <a href="./blog-details" class="btn btn-primary">View More</a>
                             </div>
                         </div>
                     </div>
@@ -94,11 +94,10 @@
                                 <p class="card-text">
                                     Hike through tea plantations, waterfalls, and stunning viewpoints in Ella.
                                 </p>
-                                <a href="#" class="btn btn-primary">View More</a>
+                                <a href="./blog-details" class="btn btn-primary">View More</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

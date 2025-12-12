@@ -741,8 +741,24 @@ header {
       font-weight: 600;
     }
 
+    .blockquote {
+      font-family: $font-cursive;
+      font-weight: 600;
+    }
+
+    p {
+      text-align: justify;
+    }
+
     h2 {
       font-family: $font-primary;
+    }
+
+    .related-posts {
+      img {
+        height: 14rem;
+        object-fit: cover;
+      }
     }
   }
 }

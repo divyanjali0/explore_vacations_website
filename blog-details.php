@@ -147,14 +147,15 @@
                 </div>
             </div>
 
+            <hr>
+
             <!-- Related Posts -->
-            <div class="mt-5">
+            <div class="mt-4 related-posts">
                 <h3 class="fw-bold mb-4">Related Blogs</h3>
                 <div class="row">
-
                     <div class="col-md-4 mb-4">
                         <div class="card h-100 shadow-sm">
-                            <img src="assets/images/sample1.jpg" class="card-img-top" alt="">
+                            <img src="assets/images/blogs/1.jpg" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">A Guide to Galle Fort</h5>
                                 <p class="card-text">Explore the historic streets, cafes and coastlines.</p>
@@ -165,7 +166,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="card h-100 shadow-sm">
-                            <img src="assets/images/sample2.jpg" class="card-img-top" alt="">
+                            <img src="assets/images/blogs/2.jpg" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Hiking in Ella</h5>
                                 <p class="card-text">Scenic mountains and peaceful tea estates.</p>
@@ -176,7 +177,7 @@
 
                     <div class="col-md-4 mb-4">
                         <div class="card h-100 shadow-sm">
-                            <img src="assets/images/sample3.jpg" class="card-img-top" alt="">
+                            <img src="assets/images/blogs/3.jpg" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Sri Lankan Cuisine</h5>
                                 <p class="card-text">A journey through authentic island flavors.</p>
