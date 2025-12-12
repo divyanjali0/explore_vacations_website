@@ -1,6 +1,11 @@
 <?php
     include ('./config.php');
     include 'assets/includes/db_connect.php';
+
+    $query = "SELECT * FROM tour_themes";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $themes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -40,11 +45,11 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-<body id = "toursPage">
+<body id="toursPage">
+
     <!-- Header starts -->
     <?php include 'parts/header.php'; ?>
     <!-- Header ends -->
-
     <!-- Hero starts -->
     <section id="hero">
         <img src="assets/images/tour-hero.jpg" alt="Explore Vacations - Tours">
@@ -55,41 +60,43 @@
     <!-- Hero ends -->
 
     <!-- Tour Theme section starts -->
+
     <section id="tour-theme" class="py-5">
         <div class="container">
+
             <div class="row">
                 <div class="col">
                     <h2 class="heading text-center">Discover Our Tour Themes</h2>
-                    <p class="supportive-text text-center"> Explore a curated collection of unique travel experiences across Sri Lanka. Whether you seek adventure, culture, wildlife, or relaxation, our tour themes help you find the perfect journey tailored to your interests.</p>
+                    <p class="supportive-text mb-0 text-center">Explore a curated collection of unique travel experiences across Sri Lanka. Whether you seek adventure, culture, wildlife, or relaxation, our tour themes help you find the perfect journey tailored to your interests.
+                    </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <?php
-                        $query = "SELECT * FROM tour_themes";
-                        $stmt = $conn->prepare($query);
-                        $stmt->execute();
-                        $themes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            <div class="row mt-2">
+                <div class="col">
+                    <div class="d-flex justify-content-end mb-3">
+                        <a id="customizeBtn" href="#" class="btn btn-primary d-none">Customize Your Tour</a>
+                    </div>                    
+                    <?php
                         if (count($themes) > 0) {
-                            echo '<div class="row g-4 mt-4">';
+                            echo '<div class="row g-4">';
 
                             foreach ($themes as $row) {
 
                                 $images = json_decode($row['theme_images'], true);
 
                                 if (!$images || count($images) === 0) {
-                                    $firstImage = 'assets/images/default-theme.jpg'; 
+                                    $imgPath = 'assets/images/default-theme.jpg';
                                 } else {
-                                    $firstImage = 'assets/' . ltrim($images[0], '/');
+                                    $imgPath = 'assets/' . ltrim($images[0], '/');
                                 }
 
                                 echo '
-                                    <div class="col-md-4 col-lg-3 mt-md-0">
-                                        <div class="card h-100 shadow-sm">
-                                            <img src="' . $firstImage . '" class="card-img-top" alt="' . htmlspecialchars($row['theme_name']) . '">
+                                    <div class="col-md-4 col-lg-3">
+                                        <div class="theme-card card h-100 shadow-sm selectable-card" data-theme-id="' . $row['id'] . '">
+                                            <img src="' . $imgPath . '" class="card-img-top" alt="' . htmlspecialchars($row['theme_name']) . '">
                                             <div class="card-body text-center">
-                                                <h3 class="card-title">' . htmlspecialchars($row['theme_name']) . '</h5>
+                                                <h3 class="card-title">' . htmlspecialchars($row['theme_name']) . '</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -107,12 +114,10 @@
     </section>
     <!-- Tour Theme section ends -->
 
-
     <!-- Footer starts -->
     <?php include 'parts/footer.php'; ?>
     <!-- Footer ends -->
 
-    <!-- Bootstrap -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Swiper JS -->
     <script src="node_modules/swiper/swiper-bundle.min.js"></script>
@@ -122,6 +127,34 @@
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+        const selectedThemes = new Set();
+        const cards = document.querySelectorAll('.selectable-card');
+        const customizeBtn = document.getElementById('customizeBtn');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.getAttribute('data-theme-id');
+
+                if (selectedThemes.has(id)) {
+                    selectedThemes.delete(id);
+                    card.classList.remove('selected');
+                } else {
+                    selectedThemes.add(id);
+                    card.classList.add('selected');
+                }
+
+                if (selectedThemes.size > 0) {
+                    customizeBtn.classList.remove('d-none');
+                } else {
+                    customizeBtn.classList.add('d-none');
+                }
+
+                customizeBtn.href = "./customize-tour?themes=" + Array.from(selectedThemes).join(",");
+            });
+        });
+    </script>
 </body>
 
 </html>

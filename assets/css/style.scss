@@ -770,7 +770,16 @@ header {
       object-fit: cover;
     }
 
-    .card {
+    .selectable-card {
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: 0.2s ease-in-out;
+
+      &.selected {
+        border: 2px solid #015d96;
+        box-shadow: 0 0 12px rgba(0, 123, 255, 0.4);
+      }
+
       .card-body {
         .card-title {
           margin-bottom: 0;
@@ -779,6 +788,13 @@ header {
           font-family: $font-cursive;
         }
       }
+    }
+
+    #customizeBtn {
+      z-index: 999;
+      border-radius: 0;
+      background-color: #1455a1;
+      font-weight: 500;
     }
   }
 }
