@@ -58,6 +58,46 @@
         <div class="container">
             <div class="col">
                 <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="assets/images/blogs/1.jpg" class="card-img-top" alt="Sri Lanka Beaches">
+                            <div class="card-body">
+                                <h2 class="card-title">Exploring Sri Lanka’s Beaches</h2>
+                                <p class="card-text">
+                                    Discover the breathtaking coastline of Sri Lanka, from Mirissa to Trincomalee.
+                                </p>
+                                <a href="./blog-details" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="assets/images/blogs/2.jpg" class="card-img-top" alt="Sri Lankan Culture">
+                            <div class="card-body">
+                                <h2 class="card-title">The Rich Culture of Sri Lanka</h2>
+                                <p class="card-text">
+                                    A look into traditional dances, festivals, and heritage sites across the island.
+                                </p>
+                                <a href="#" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="assets/images/blogs/3.jpg" class="card-img-top" alt="Ella Sri Lanka">
+                            <div class="card-body">
+                                <h2 class="card-title">Adventure in Ella</h2>
+                                <p class="card-text">
+                                    Hike through tea plantations, waterfalls, and stunning viewpoints in Ella.
+                                </p>
+                                <a href="#" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>

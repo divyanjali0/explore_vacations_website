@@ -704,6 +704,46 @@ header {
 #blogPage {
   #blogs {
     overflow: hidden;
+
+    .card {
+      .card-body {
+        .card-title {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 18px;
+          font-family: $font-primary;
+        }
+
+        .btn {
+          background-color: #006da9;
+          border-color: #006da9;
+          border-radius: 0;
+          font-weight: 600;
+        }
+      }
+    }
+
+    img {
+      height: 14rem;
+      object-fit: cover;
+    }
+  }
+}
+
+#blogDetailPage {
+  #blog-details {
+    overflow: hidden;
+
+    .btn {
+      background-color: #006da9;
+      border-color: #006da9;
+      border-radius: 0;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-family: $font-primary;
+    }
   }
 }
 

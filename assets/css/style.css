@@ -571,6 +571,36 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 #blogPage #blogs {
   overflow: hidden;
 }
+#blogPage #blogs .card .card-body .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: "Playfair Display", serif;
+}
+#blogPage #blogs .card .card-body .btn {
+  background-color: #006da9;
+  border-color: #006da9;
+  border-radius: 0;
+  font-weight: 600;
+}
+#blogPage #blogs img {
+  height: 14rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#blogDetailPage #blog-details {
+  overflow: hidden;
+}
+#blogDetailPage #blog-details .btn {
+  background-color: #006da9;
+  border-color: #006da9;
+  border-radius: 0;
+  font-weight: 600;
+}
+#blogDetailPage #blog-details h2 {
+  font-family: "Playfair Display", serif;
+}
 
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,
