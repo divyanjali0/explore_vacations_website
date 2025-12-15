@@ -160,214 +160,238 @@ try {
                 </div>
             </div>
 
-            <div class="intro row align-items-center mt-4">
-                <div class="col">
-                    <p class="mb-0">
-                        Pick cities you want to explore, ✨ customize your trip, and send us your plan. We'll guide you through the next steps and put together a full itinerary with cozy stays 🏨, fun activities 🎉, and all the details you need...
-                    </p>
+            <div class="row my-4">
+                <div class="col-auto trip-options">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tripOption" id="optionCustomize" value="customize">
+                        <label class="form-check-label fw-semibold" for="optionCustomize">Customize Your Trip ✨</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tripOption" id="optionGuide" value="guide">
+                        <label class="form-check-label fw-semibold" for="optionGuide">Need Help With Planning? 🧭</label>
+                    </div>
                 </div>
             </div>
+
             <hr>
 
-            <div class="card mt-4 border-0">
-                <div class="row g-3 align-items-center">
-                    <!-- Dates -->
-                    <div class="col-md-6 col-lg-4">
-                        <label class="form-label fw-semibold">Dates</label>
-                        <div class="input-group">
-                            <input type="date" class="form-control text-center" name="start_date" placeholder="Start Date">
-                            <input type="number" class="form-control text-center" name="nights" placeholder="Nights" min="1">
-                            <input type="date" class="form-control text-center" name="end_date" placeholder="End Date">
-                        </div>
-                    </div>
-
-                    <!-- Guests -->
-                    <div class="col-md-6 col-lg-4">
-                        <label class="form-label fw-semibold">Guests</label>
-                        <div class="dropdown">
-                            <button class="form-control text-start" type="button" id="guestDropdownButton">
-                                2 Adults, 0 Children, 0 Infants
-                            </button>
-                            <div class="dropdown-menu p-3" id="guestDropdownMenu" style="min-width: 250px;">
-                                <!-- Adults -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span>Adults</span>
-                                    <div class="input-group input-group-sm" style="width: 100px;">
-                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="adults">-</button>
-                                        <input type="number" class="form-control text-center" id="adults" value="2" min="1" readonly>
-                                        <button class="btn btn-outline-secondary increment" type="button" data-target="adults">+</button>
-                                    </div>
-                                </div>
-
-                                <!-- Children 6-11 -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span>Children (6-11)</span>
-                                    <div class="input-group input-group-sm" style="width: 100px;">
-                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="children_6_11">-</button>
-                                        <input type="number" class="form-control text-center" id="children_6_11" value="0" min="0" readonly>
-                                        <button class="btn btn-outline-secondary increment" type="button" data-target="children_6_11">+</button>
-                                    </div>
-                                </div>
-
-                                <!-- Children 12+ -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span>Children (12+)</span>
-                                    <div class="input-group input-group-sm" style="width: 100px;">
-                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="children_above_11">-</button>
-                                        <input type="number" class="form-control text-center" id="children_above_11" value="0" min="0" readonly>
-                                        <button class="btn btn-outline-secondary increment" type="button" data-target="children_above_11">+</button>
-                                    </div>
-                                </div>
-
-                                <!-- Infants -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span>Infants</span>
-                                    <div class="input-group input-group-sm" style="width: 100px;">
-                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="infants">-</button>
-                                        <input type="number" class="form-control text-center" id="infants" value="0" min="0" readonly>
-                                        <button class="btn btn-outline-secondary increment" type="button" data-target="infants">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div id="customizeForm" style="display:none;">
+                <div class="intro row align-items-center mt-4">
+                    <div class="col">
+                        <p class="mb-0">
+                            Pick cities you want to explore, ✨ customize your trip, and send us your plan. We'll guide you through the next steps and put together a full itinerary with cozy stays 🏨, fun activities 🎉, and all the details you need...
+                        </p>
                     </div>
                 </div>
                 <hr>
-                <div class="cities row mb-4">
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center mb-2 text-nowrap">
-                            <h3 class="me-3 mb-0">Add City</h3>
-                            <input type="text" id="cityInput" class="form-control me-2" placeholder="Enter city or location">
-                            <button class="btn btn-primary" id="addCityBtn"><img src="assets/images/icons/plus.svg" class="img-fluid" alt="button"></button>
-                        </div>
 
-                        <div class="d-flex justify-content-between align-items-center mt-4">
-                            <h3>Added Cities</h3>
-                            <button class="btn btn-sm btn-danger remove-btn" id="removeAllBtn" style="display:none;"><img src="assets/images/icons/bin.svg" class="img-fluid bin-button"></button>
-                        </div>
-                        <ul class="list-group mt-2" id="cityList"></ul>
-                    </div>
-
-                    <div class="col-md-6 mt-4 mt-md-0">
-                        <h3>Tour Map</h3>
-                        <div id="map" style="height: 300px; width: 100%;"></div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <!-- Question 1: Meal Plan -->
-                    <div class="col-12 col-md-6 mb-4">
-                        <label class="form-label fw-semibold">Prefered Meal Plan</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan1" value="Breakfast Only">
-                            <label class="form-check-label" for="mealPlan1">Breakfast Only</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan2" value="Half Board">
-                            <label class="form-check-label" for="mealPlan2">Half Board</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan3" value="Full Board">
-                            <label class="form-check-label" for="mealPlan3">Full Board</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan4" value="All Inclusive">
-                            <label class="form-check-label" for="mealPlan4">All Inclusive</label>
-                        </div>
-                    </div>
-
-                    <!-- Question 2: Meal Allergy -->
-                    <div class="col-12 col-md-6 mb-4">
-                        <label class="form-label fw-semibold">Do you have any meal allergy issues?</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyYes" value="Yes">
-                            <label class="form-check-label" for="mealAllergyYes">Yes</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyNo" value="No">
-                            <label class="form-check-label" for="mealAllergyNo">No</label>
-                        </div>
-                        <!-- Optional: input field if "Yes" is selected -->
-                        <div class="mt-2" id="allergyDetails" style="display:none;">
-                            <input type="text" class="form-control" placeholder="Please specify your allergy">
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-3">
-                        <div class="row g-2 align-items-end">
-                            <div class="col-auto">
-                                <label for="title" class="form-label small">Title<span class="text-danger">*</span></label>
-                                <select class="form-select" id="title" name="title" required>
-                                    <option value="" selected disabled>Select</option>
-                                    <option value="Mr">Mr</option>
-                                    <option value="Mrs">Mrs</option>
-                                    <option value="Ms">Ms</option>
-                                    <option value="Dr">Dr</option>
-                                    <option value="Prof">Prof</option>
-                                </select>
+                <div class="card mt-4 border-0">
+                    <div class="row g-3 align-items-center">
+                        <!-- Dates -->
+                        <div class="col-md-6 col-lg-4">
+                            <label class="form-label fw-semibold">Dates</label>
+                            <div class="input-group">
+                                <input type="date" class="form-control text-center" name="start_date" placeholder="Start Date">
+                                <input type="number" class="form-control text-center" name="nights" placeholder="Nights" min="1">
+                                <input type="date" class="form-control text-center" name="end_date" placeholder="End Date">
                             </div>
-                            <div class="col">
-                                <label for="fullName" class="form-label">Full Name<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <!-- Guests -->
+                        <div class="col-md-6 col-lg-4">
+                            <label class="form-label fw-semibold">Guests</label>
+                            <div class="dropdown">
+                                <button class="form-control text-start" type="button" id="guestDropdownButton">
+                                    2 Adults, 0 Children, 0 Infants
+                                </button>
+                                <div class="dropdown-menu p-3" id="guestDropdownMenu" style="min-width: 250px;">
+                                    <!-- Adults -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span>Adults</span>
+                                        <div class="input-group input-group-sm" style="width: 100px;">
+                                            <button class="btn btn-outline-secondary decrement" type="button" data-target="adults">-</button>
+                                            <input type="number" class="form-control text-center" id="adults" value="2" min="1" readonly>
+                                            <button class="btn btn-outline-secondary increment" type="button" data-target="adults">+</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Children 6-11 -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span>Children (6-11)</span>
+                                        <div class="input-group input-group-sm" style="width: 100px;">
+                                            <button class="btn btn-outline-secondary decrement" type="button" data-target="children_6_11">-</button>
+                                            <input type="number" class="form-control text-center" id="children_6_11" value="0" min="0" readonly>
+                                            <button class="btn btn-outline-secondary increment" type="button" data-target="children_6_11">+</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Children 12+ -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span>Children (12+)</span>
+                                        <div class="input-group input-group-sm" style="width: 100px;">
+                                            <button class="btn btn-outline-secondary decrement" type="button" data-target="children_above_11">-</button>
+                                            <input type="number" class="form-control text-center" id="children_above_11" value="0" min="0" readonly>
+                                            <button class="btn btn-outline-secondary increment" type="button" data-target="children_above_11">+</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Infants -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span>Infants</span>
+                                        <div class="input-group input-group-sm" style="width: 100px;">
+                                            <button class="btn btn-outline-secondary decrement" type="button" data-target="infants">-</button>
+                                            <input type="number" class="form-control text-center" id="infants" value="0" min="0" readonly>
+                                            <button class="btn btn-outline-secondary increment" type="button" data-target="infants">+</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-md-6 mb-3">
-                        <label class="form-label fw-semibold" for="email">Email<span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="col-12 col-md-6 mb-3">
-                        <div class="row g-2 align-items-end">
-                            <div class="col-auto code" style="width:50%;">
-                                <label for="whatsappCode" class="form-label small">Code<span class="text-danger">*</span></label>
-                                <select class="form-select" id="whatsappCode" name="whatsappCode" required>
-                                    <option value="" selected disabled>Select</option>
-                                    <?php foreach($countryCodes as $c): ?>
-                                        <option value="<?php echo htmlspecialchars($c['country_code']); ?>">
-                                            <?php echo htmlspecialchars($c['country_name'] . ' (' . $c['country_code'] . ')'); ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>
+                    <hr>
+                    <div class="cities row mb-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-2 text-nowrap">
+                                <h3 class="me-3 mb-0">Add City</h3>
+                                <input type="text" id="cityInput" class="form-control me-2" placeholder="Enter city or location">
+                                <button class="btn btn-primary" id="addCityBtn"><img src="assets/images/icons/plus.svg" class="img-fluid" alt="button"></button>
                             </div>
-                            <div class="col">
-                                <label for="whatsapp" class="form-label">WhatsApp Number<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number" required>
+
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <h3>Added Cities</h3>
+                                <button class="btn btn-sm btn-danger remove-btn" id="removeAllBtn" style="display:none;"><img src="assets/images/icons/bin.svg" class="img-fluid bin-button"></button>
+                            </div>
+                            <ul class="list-group mt-2" id="cityList"></ul>
+                        </div>
+
+                        <div class="col-md-6 mt-4 mt-md-0">
+                            <h3>Tour Map</h3>
+                            <div id="map" style="height: 300px; width: 100%;"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <!-- Question 1: Meal Plan -->
+                        <div class="col-12 col-md-6 mb-4">
+                            <label class="form-label fw-semibold">Prefered Meal Plan</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan1" value="Breakfast Only">
+                                <label class="form-check-label" for="mealPlan1">Breakfast Only</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan2" value="Half Board">
+                                <label class="form-check-label" for="mealPlan2">Half Board</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan3" value="Full Board">
+                                <label class="form-check-label" for="mealPlan3">Full Board</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan4" value="All Inclusive">
+                                <label class="form-check-label" for="mealPlan4">All Inclusive</label>
+                            </div>
+                        </div>
+
+                        <!-- Question 2: Meal Allergy -->
+                        <div class="col-12 col-md-6 mb-4">
+                            <label class="form-label fw-semibold">Do you have any meal allergy issues?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyYes" value="Yes">
+                                <label class="form-check-label" for="mealAllergyYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyNo" value="No">
+                                <label class="form-check-label" for="mealAllergyNo">No</label>
+                            </div>
+                            <!-- Optional: input field if "Yes" is selected -->
+                            <div class="mt-2" id="allergyDetails" style="display:none;">
+                                <input type="text" class="form-control" placeholder="Please specify your allergy">
                             </div>
                         </div>
                     </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="row g-2 align-items-end">
+                                <div class="col-auto">
+                                    <label for="title" class="form-label small">Title<span class="text-danger">*</span></label>
+                                    <select class="form-select" id="title" name="title" required>
+                                        <option value="" selected disabled>Select</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Ms">Ms</option>
+                                        <option value="Dr">Dr</option>
+                                        <option value="Prof">Prof</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="fullName" class="form-label">Full Name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="col-12 col-md-6 mb-3">
-                        <label class="form-label fw-semibold" for="country">Country<span class="text-danger">*</span></label>
-                        <select class="form-select" id="country" name="country" required>
-                            <option value="" selected disabled>Select your country</option>
-                        </select>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label fw-semibold" for="email">Email<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="row g-2 align-items-end">
+                                <div class="col-auto code" style="width:50%;">
+                                    <label for="whatsappCode" class="form-label small">Code<span class="text-danger">*</span></label>
+                                    <select class="form-select" id="whatsappCode" name="whatsappCode" required>
+                                        <option value="" selected disabled>Select</option>
+                                        <?php foreach($countryCodes as $c): ?>
+                                            <option value="<?php echo htmlspecialchars($c['country_code']); ?>">
+                                                <?php echo htmlspecialchars($c['country_name'] . ' (' . $c['country_code'] . ')'); ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="whatsapp" class="form-label">WhatsApp Number<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label fw-semibold" for="country">Country<span class="text-danger">*</span></label>
+                            <select class="form-select" id="country" name="country" required>
+                                <option value="" selected disabled>Select your country</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label fw-semibold" for="nationality">Nationality<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter your Nationality" required>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label fw-semibold" for="flightNumber">Flight Number<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="flightNumber" name="flightNumber" placeholder="Enter flight number" required>
+                        </div>
                     </div>
-
-                    <div class="col-12 col-md-6 mb-3">
-                        <label class="form-label fw-semibold" for="nationality">Nationality<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter your Nationality" required>
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label fw-semibold" for="remarks">Remarks</label>
+                            <textarea class="form-control" id="remarks" name="remarks" rows="4" placeholder="Any remarks or requests"></textarea>
+                        </div>
                     </div>
-
-                    <div class="col-12 col-md-6 mb-3">
-                        <label class="form-label fw-semibold" for="flightNumber">Flight Number<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="flightNumber" name="flightNumber" placeholder="Enter flight number" required>
+                    <div class="row">
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-primary submit-button">Submit</button>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-3">
-                        <label class="form-label fw-semibold" for="remarks">Remarks</label>
-                        <textarea class="form-control" id="remarks" name="remarks" rows="4" placeholder="Any remarks or requests"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex justify-content-end">
-                        <button class="btn btn-primary submit-button">Submit</button>
-                    </div>
-                </div>
+            </div>
+
+            <div id="contactSection" class="my-4" style="display:none;">
+                <p class="lead">
+                    Need a hand planning your trip? Contact us and we’ll help you create an amazing itinerary! 📩
+                </p>
+                <a href="./contact" class="btn btn-primary contact-button">Contact Us</a>
             </div>
         </div>
     </section>
@@ -387,6 +411,25 @@ try {
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+        const optionCustomize = document.getElementById('optionCustomize');
+        const optionGuide = document.getElementById('optionGuide');
+        const customizeForm = document.getElementById('customizeForm');
+        const contactSection = document.getElementById('contactSection');
+
+        document.querySelectorAll('input[name="tripOption"]').forEach(input => {
+            input.addEventListener('change', () => {
+                if(optionCustomize.checked){
+                    customizeForm.style.display = 'block';
+                    contactSection.style.display = 'none';
+                } else if(optionGuide.checked){
+                    customizeForm.style.display = 'none';
+                    contactSection.style.display = 'block';
+                }
+            });
+        });
+    </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl50Q8W4ZF2_EkOJ1lnRoVxO1IdjIupjM&libraries=places&callback=initMap" async defer></script>
 

@@ -651,6 +651,10 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 #toursCustomizePage #customize-tour .active::after {
   border-bottom: 1px solid #ffffff;
 }
+#toursCustomizePage #customize-tour .trip-options .form-check-label {
+  font-family: "Shantell Sans", cursive !important;
+  font-weight: 500 !important;
+}
 #toursCustomizePage #customize-tour .intro p {
   font-family: "Quintessential", cursive;
   font-weight: 600;
@@ -684,6 +688,15 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 #toursCustomizePage #customize-tour .submit-button {
   border-radius: 0;
   background-color: #0060a6;
+}
+#toursCustomizePage #customize-tour #contactSection p {
+  font-family: "Quintessential", cursive;
+  font-weight: 500;
+}
+#toursCustomizePage #customize-tour #contactSection .contact-button {
+  border-radius: 0;
+  background-color: #0060a6;
+  font-weight: 600;
 }
 
 #whatsapp-widget .chat-header,

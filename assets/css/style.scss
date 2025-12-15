@@ -812,6 +812,13 @@ header {
       border-bottom: 1px solid $color-white;
     }
 
+    .trip-options {
+      .form-check-label {
+        font-family: $font-handwriting !important;
+        font-weight: 500 !important;
+      }
+    }
+
     .intro {
       p {
         font-family: $font-cursive;
@@ -855,6 +862,19 @@ header {
     .submit-button {
       border-radius: 0;
       background-color: $color-primary;
+    }
+
+    #contactSection {
+      p {
+        font-family: $font-cursive;
+        font-weight: 500;
+      }
+
+      .contact-button {
+        border-radius: 0;
+        background-color: $color-primary;
+        font-weight: 600;
+      }
     }
   }
 }

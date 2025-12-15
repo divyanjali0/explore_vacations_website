@@ -9,6 +9,10 @@
   border-bottom: 2px solid #0060a6;
 }
 
+.form-check-input:checked {
+  background-color: #0060a6 !important;
+}
+
 form .form-control {
   border: 0;
   border-bottom: 1px solid #8D8D8D;
