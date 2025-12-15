@@ -269,47 +269,48 @@ try {
                             <div id="map" style="height: 300px; width: 100%;"></div>
                         </div>
                     </div>
+
                     <hr>
+
                     <div class="row">
-                        <!-- Question 1: Meal Plan -->
                         <div class="col-12 col-md-6 mb-4">
-                            <label class="form-label fw-semibold">Prefered Meal Plan</label>
-                            <div class="form-check">
+                            <label class="form-label fw-semibold d-block">Preferred Meal Plan</label>
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan1" value="Breakfast Only">
                                 <label class="form-check-label" for="mealPlan1">Breakfast Only</label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan2" value="Half Board">
                                 <label class="form-check-label" for="mealPlan2">Half Board</label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan3" value="Full Board">
                                 <label class="form-check-label" for="mealPlan3">Full Board</label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan4" value="All Inclusive">
                                 <label class="form-check-label" for="mealPlan4">All Inclusive</label>
                             </div>
                         </div>
 
-                        <!-- Question 2: Meal Allergy -->
                         <div class="col-12 col-md-6 mb-4">
-                            <label class="form-label fw-semibold">Do you have any meal allergy issues?</label>
-                            <div class="form-check">
+                            <label class="form-label fw-semibold d-block">Do you have any meal allergy issues?</label>
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyYes" value="Yes">
                                 <label class="form-check-label" for="mealAllergyYes">Yes</label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyNo" value="No">
                                 <label class="form-check-label" for="mealAllergyNo">No</label>
                             </div>
-                            <!-- Optional: input field if "Yes" is selected -->
                             <div class="mt-2" id="allergyDetails" style="display:none;">
                                 <input type="text" class="form-control" placeholder="Please specify your allergy">
                             </div>
                         </div>
                     </div>
+
                     <hr>
+                    
                     <div class="row">
                         <div class="col-12 col-md-6 mb-3">
                             <div class="row g-2 align-items-end">
@@ -351,7 +352,7 @@ try {
                                 </div>
                                 <div class="col">
                                     <label for="whatsapp" class="form-label">WhatsApp Number<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number" required>
+                                    <input type="phone" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number" required>
                                 </div>
                             </div>
                         </div>
