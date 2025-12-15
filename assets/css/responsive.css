@@ -54,6 +54,9 @@
   #toursPage #tour-theme .supportive-text {
     padding: 0 12%;
   }
+  #toursCustomizePage #customize-tour .code {
+    width: 20% !important;
+  }
 }
 @media (min-width: 1200px) {
   #homePage #homeHero .homehero-content h1 {

@@ -29,6 +29,18 @@ if (!empty($themeIDsArray)) {
         }
     }
 }
+
+// Fetch country codes from DB
+$countryCodes = [];
+try {
+    $stmt = $conn->prepare("SELECT country_name, country_code FROM country_codes ORDER BY country_name ASC");
+    $stmt->execute();
+    $countryCodes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {
+    // Handle error
+    error_log("Error fetching country codes: " . $e->getMessage());
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -300,15 +312,29 @@ if (!empty($themeIDsArray)) {
                     </div>
 
                     <div class="col-12 col-md-6 mb-3">
-                        <label class="form-label fw-semibold" for="whatsapp">WhatsApp Number<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number" required>
+                        <div class="row g-2 align-items-end">
+                            <div class="col-auto code" style="width:50%;">
+                                <label for="whatsappCode" class="form-label small">Code<span class="text-danger">*</span></label>
+                                <select class="form-select" id="whatsappCode" name="whatsappCode" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <?php foreach($countryCodes as $c): ?>
+                                        <option value="<?php echo htmlspecialchars($c['country_code']); ?>">
+                                            <?php echo htmlspecialchars($c['country_name'] . ' (' . $c['country_code'] . ')'); ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="whatsapp" class="form-label">WhatsApp Number<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number" required>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12 col-md-6 mb-3">
                         <label class="form-label fw-semibold" for="country">Country<span class="text-danger">*</span></label>
                         <select class="form-select" id="country" name="country" required>
                             <option value="" selected disabled>Select your country</option>
-                            <!-- Countries will be dynamically populated here -->
                         </select>
                     </div>
 
