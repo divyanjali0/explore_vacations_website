@@ -652,6 +652,11 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   -o-object-fit: cover;
      object-fit: cover;
 }
+#toursCustomizePage #customize-tour h3 {
+  font-size: 16px;
+  font-family: "Shantell Sans", cursive;
+  font-weight: 600;
+}
 
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,

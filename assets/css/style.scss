@@ -811,6 +811,12 @@ header {
       height: 12rem;
       object-fit: cover;
     }
+
+    h3 {
+      font-size: 16px;
+      font-family: $font-handwriting;
+      font-weight: 600;
+    }
   }
 }
 

@@ -66,6 +66,26 @@ if (!empty($themeIDsArray)) {
     <link rel="stylesheet" href="assets/css/overrides.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+        <style>
+        /* Smooth slide down/up animation */
+        .dropdown-menu {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+            max-height: 500px; /* enough to show all content */
+        }
+
+        .input-group-sm > .btn, .input-group-sm > .form-control {
+            height: 30px;
+            font-size: 0.875rem;
+        }
+    </style>
 </head>
 
 <body id="toursCustomizePage">
@@ -76,15 +96,15 @@ if (!empty($themeIDsArray)) {
 
     <!-- Hero section starts -->
     <section id="hero">
-        <img src="assets/images/tour-hero.jpg" alt="Explore Vacations - Tours">
+        <img src="assets/images/cutomize-tour-hero.jpg" alt="Explore Vacations - Tours">
         <div class="hero-content">
-            <h1>Tours</h1>
+            <h1>Customize Tours</h1>
         </div>
     </section>
     <!-- Hero section ends -->
 
     <!-- Customize Tours section starts -->
-    <section id="customize-tour" class="py-4">
+    <section id="customize-tour" class="py-5">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -101,35 +121,115 @@ if (!empty($themeIDsArray)) {
 
             <h2 class="heading mb-4">Customize Your Selected Tour</h2>
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-12">
                     <div class="card shadow-sm">
                         <div id="tourCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
-
                                 <?php if (!empty($allImages)): ?>
                                     <?php foreach ($allImages as $index => $img): ?>
                                         <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
-                                            <img src="assets/<?php echo ltrim($img, '/'); ?>" 
-                                                class="d-block w-100 rounded" 
-                                                alt="Tour Image">
+                                            <img src="assets/<?php echo ltrim($img, '/'); ?>" class="d-block w-100 rounded" alt="Tour Image">
                                         </div>
                                     <?php endforeach; ?>
                                 <?php else: ?>
                                     <div class="carousel-item active">
-                                        <img src="assets/images/default-theme.jpg" 
-                                            class="d-block w-100 rounded" 
-                                            alt="No Image">
+                                        <img src="assets/images/default-theme.jpg" class="d-block w-100 rounded" alt="No Image">
                                     </div>
                                 <?php endif; ?>
 
                             </div>
-                            <!-- Indicators -->
                             <div class="carousel-indicators">
                                 <?php foreach ($allImages as $index => $img): ?>
                                     <button type="button" data-bs-target="#tourCarousel" data-bs-slide-to="<?php echo $index; ?>" class="<?php echo $index === 0 ? 'active' : ''; ?>" aria-current="<?php echo $index === 0 ? 'true' : 'false'; ?>" aria-label="Slide <?php echo $index + 1; ?>"></button>
                                 <?php endforeach; ?>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5 border-0">
+                <div class="row g-3 align-items-center">
+                    <!-- Dates -->
+                    <div class="col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold">Dates</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control text-center" name="start_date" placeholder="Start Date">
+                            <input type="number" class="form-control text-center" name="nights" placeholder="Nights" min="1">
+                            <input type="date" class="form-control text-center" name="end_date" placeholder="End Date">
+                        </div>
+                    </div>
+
+                    <!-- Guests -->
+                    <div class="col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold">Guests</label>
+                        <div class="dropdown">
+                            <button class="form-control text-start" type="button" id="guestDropdownButton">
+                                2 Adults, 0 Children, 0 Infants
+                            </button>
+                            <div class="dropdown-menu p-3" id="guestDropdownMenu" style="min-width: 250px;">
+                                <!-- Adults -->
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Adults</span>
+                                    <div class="input-group input-group-sm" style="width: 100px;">
+                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="adults">-</button>
+                                        <input type="number" class="form-control text-center" id="adults" value="2" min="1" readonly>
+                                        <button class="btn btn-outline-secondary increment" type="button" data-target="adults">+</button>
+                                    </div>
+                                </div>
+
+                                <!-- Children 6-11 -->
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Children (6-11)</span>
+                                    <div class="input-group input-group-sm" style="width: 100px;">
+                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="children_6_11">-</button>
+                                        <input type="number" class="form-control text-center" id="children_6_11" value="0" min="0" readonly>
+                                        <button class="btn btn-outline-secondary increment" type="button" data-target="children_6_11">+</button>
+                                    </div>
+                                </div>
+
+                                <!-- Children 12+ -->
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Children (12+)</span>
+                                    <div class="input-group input-group-sm" style="width: 100px;">
+                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="children_above_11">-</button>
+                                        <input type="number" class="form-control text-center" id="children_above_11" value="0" min="0" readonly>
+                                        <button class="btn btn-outline-secondary increment" type="button" data-target="children_above_11">+</button>
+                                    </div>
+                                </div>
+
+                                <!-- Infants -->
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>Infants</span>
+                                    <div class="input-group input-group-sm" style="width: 100px;">
+                                        <button class="btn btn-outline-secondary decrement" type="button" data-target="infants">-</button>
+                                        <input type="number" class="form-control text-center" id="infants" value="0" min="0" readonly>
+                                        <button class="btn btn-outline-secondary increment" type="button" data-target="infants">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-2 text-nowrap">
+                            <h3 class="me-3 mb-0">Add City</h3>
+                            <input type="text" id="cityInput" class="form-control me-2" placeholder="Enter city or location">
+                            <button class="btn btn-primary" id="addCityBtn">Add</button>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <h3>Added Cities</h3>
+                            <!-- <button class="btn btn-sm btn-danger" id="removeAllBtn" style="display:none;">Remove All</button> -->
+                        </div>
+                        <ul class="list-group" id="cityList"></ul>
+                    </div>
+
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <h3>Tour Map</h3>
+                        <div id="map" style="height: 400px; width: 100%;"></div>
                     </div>
                 </div>
             </div>
@@ -151,5 +251,149 @@ if (!empty($themeIDsArray)) {
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl50Q8W4ZF2_EkOJ1lnRoVxO1IdjIupjM&libraries=places&callback=initMap" async defer></script>
+
+    <script>
+        const btn = document.getElementById('guestDropdownButton');
+        const menu = document.getElementById('guestDropdownMenu');
+        const ids = ['adults','children_6_11','children_above_11','infants'];
+
+        btn.addEventListener('click', () => menu.classList.toggle('show'));
+        document.addEventListener('click', e => { if(!btn.contains(e.target)&&!menu.contains(e.target)) menu.classList.remove('show'); });
+
+        function update() {
+            const adults = +document.getElementById('adults').value;
+            const children = ids.slice(1).reduce((s,id)=>s + +document.getElementById(id).value,0);
+            btn.textContent = `${adults} Adults, ${children} Children`;
+        }
+
+        document.querySelectorAll('.increment,.decrement').forEach(b=>{
+            b.addEventListener('click', ()=>{
+                const i = document.getElementById(b.dataset.target);
+                const min = +i.min||0;
+                i.value = Math.max(min, +i.value + (b.classList.contains('increment')?1:-1));
+                update();
+            });
+        });
+
+        update();
+
+    </script>
+
+    <script>
+        let map, autocomplete;
+        let markers = [];
+        let locations = [];
+        let polyline;
+
+        function initMap() {
+            // Initialize map
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 7.8731, lng: 80.7718 },
+                zoom: 7
+            });
+
+            polyline = new google.maps.Polyline({
+                path: locations,
+                geodesic: true,
+                strokeColor: "#FF0000",
+                strokeOpacity: 1.0,
+                strokeWeight: 3,
+                map: map
+            });
+
+            // Google Places Autocomplete restricted to Sri Lanka
+            autocomplete = new google.maps.places.Autocomplete(document.getElementById("cityInput"), {
+                componentRestrictions: { country: "lk" },
+                fields: ["geometry", "name", "formatted_address"]
+            });
+
+            autocomplete.addListener("place_changed", onPlaceSelected);
+        }
+
+        function onPlaceSelected() {
+            const place = autocomplete.getPlace();
+            if (!place.geometry) {
+                alert("Please select a location from the dropdown");
+                return;
+            }
+
+            addLocation(place.geometry.location.lat(), place.geometry.location.lng(), place.formatted_address);
+            document.getElementById("cityInput").value = "";
+        }
+
+        document.getElementById("addCityBtn").addEventListener("click", () => {
+            const input = document.getElementById("cityInput").value.trim();
+            if (!input) return;
+            // Trigger place selection from autocomplete manually
+            google.maps.event.trigger(autocomplete, 'place_changed');
+        });
+
+        document.getElementById("removeAllBtn").addEventListener("click", removeAllLocations);
+
+        function addLocation(lat, lng, label) {
+            const location = { lat, lng };
+            locations.push(location);
+
+            // Add marker
+            const marker = new google.maps.Marker({ map, position: location, title: label });
+            markers.push(marker);
+
+            // Update polyline
+            polyline.setPath(locations);
+
+            // Fit map bounds
+            const bounds = new google.maps.LatLngBounds();
+            markers.forEach(m => bounds.extend(m.getPosition()));
+            map.fitBounds(bounds);
+
+            // Show remove all button
+            const removeAllBtn = document.getElementById("removeAllBtn");
+            removeAllBtn.style.display = "inline-block";
+
+            // Add to list with remove button
+            const li = document.createElement("li");
+            li.className = "list-group-item d-flex justify-content-between align-items-center";
+            li.innerHTML = `<span>${label}</span> <button class="btn btn-sm btn-outline-danger">Remove</button>`;
+            document.getElementById("cityList").appendChild(li);
+
+            const index = markers.length - 1;
+            li.querySelector("button").addEventListener("click", () => removeSingle(index, li));
+        }
+
+        function removeSingle(index, li) {
+            if (markers[index]) {
+                markers[index].setMap(null);
+                markers.splice(index, 1);
+                locations.splice(index, 1);
+                polyline.setPath(locations);
+                li.remove();
+            }
+            updateMapBounds();
+        }
+
+        function removeAllLocations() {
+            markers.forEach(m => m.setMap(null));
+            markers = [];
+            locations = [];
+            polyline.setPath([]);
+            document.getElementById("cityList").innerHTML = "";
+            updateMapBounds();
+            document.getElementById("removeAllBtn").style.display = "none";
+        }
+
+        function updateMapBounds() {
+            if (markers.length) {
+                const bounds = new google.maps.LatLngBounds();
+                markers.forEach(m => bounds.extend(m.getPosition()));
+                map.fitBounds(bounds);
+            } else {
+                map.setCenter({ lat: 7.8731, lng: 80.7718 });
+                map.setZoom(7);
+            }
+        }
+    </script>
+
 </body>
 </html>
