@@ -843,6 +843,11 @@ header {
         }
       }
     }
+
+    .submit-button {
+      border-radius: 0;
+      background-color: $color-primary;
+    }
   }
 }
 

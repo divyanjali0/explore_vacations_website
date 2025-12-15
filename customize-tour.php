@@ -354,6 +354,11 @@ try {
                         <textarea class="form-control" id="remarks" name="remarks" rows="4" placeholder="Any remarks or requests"></textarea>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-end">
+                        <button class="btn btn-primary submit-button">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
