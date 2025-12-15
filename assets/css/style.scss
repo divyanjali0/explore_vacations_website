@@ -800,6 +800,11 @@ header {
 }
 
 #toursCustomizePage {
+  .form-control {
+    border-radius: 0;
+    border-color: #494949 !important;
+  }
+
   #customize-tour {
     overflow: hidden;
 

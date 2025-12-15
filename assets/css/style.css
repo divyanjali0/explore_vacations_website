@@ -641,6 +641,10 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-weight: 500;
 }
 
+#toursCustomizePage .form-control {
+  border-radius: 0;
+  border-color: #494949 !important;
+}
 #toursCustomizePage #customize-tour {
   overflow: hidden;
 }

@@ -236,7 +236,7 @@ if (!empty($themeIDsArray)) {
                 <div class="row">
                     <!-- Question 1: Meal Plan -->
                     <div class="col-12 col-md-6 mb-4">
-                        <label class="form-label fw-semibold">Select Your Meal Plan</label>
+                        <label class="form-label fw-semibold">Prefered Meal Plan</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan1" value="Breakfast Only">
                             <label class="form-check-label" for="mealPlan1">Breakfast Only</label>
