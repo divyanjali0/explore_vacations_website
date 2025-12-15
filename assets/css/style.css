@@ -651,6 +651,11 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 #toursCustomizePage #customize-tour .active::after {
   border-bottom: 1px solid #ffffff;
 }
+#toursCustomizePage #customize-tour .intro p {
+  font-family: "Quintessential", cursive;
+  font-weight: 600;
+  text-align: center;
+}
 #toursCustomizePage #customize-tour img {
   height: 12rem;
   -o-object-fit: cover;

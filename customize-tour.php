@@ -160,7 +160,16 @@ try {
                 </div>
             </div>
 
-            <div class="card mt-5 border-0">
+            <div class="intro row align-items-center mt-4">
+                <div class="col">
+                    <p class="mb-0">
+                        Pick cities you want to explore, ✨ customize your trip, and send us your plan. We'll guide you through the next steps and put together a full itinerary with cozy stays 🏨, fun activities 🎉, and all the details you need...
+                    </p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="card mt-4 border-0">
                 <div class="row g-3 align-items-center">
                     <!-- Dates -->
                     <div class="col-md-6 col-lg-4">
