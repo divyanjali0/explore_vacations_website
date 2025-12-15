@@ -470,37 +470,7 @@ try {
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
 
-    <script>
-        let pickupAutocomplete, dropoffAutocomplete;
-
-        function initPickupDropoffAutocomplete() {
-            // Restrict to Sri Lanka or remove if global
-            const options = {
-                componentRestrictions: { country: "lk" }, 
-                fields: ["geometry", "name", "formatted_address"]
-            };
-
-            pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById("pickupLocation"), options);
-            dropoffAutocomplete = new google.maps.places.Autocomplete(document.getElementById("dropoffLocation"), options);
-
-            pickupAutocomplete.addListener("place_changed", () => {
-                const place = pickupAutocomplete.getPlace();
-                if (!place.geometry) {
-                    alert("Please select a pickup location from the dropdown");
-                }
-            });
-
-            dropoffAutocomplete.addListener("place_changed", () => {
-                const place = dropoffAutocomplete.getPlace();
-                if (!place.geometry) {
-                    alert("Please select a dropoff location from the dropdown");
-                }
-            });
-        }
-
-        // Call this inside your existing initMap callback or on DOMContentLoaded
-        google.maps.event.addDomListener(window, 'load', initPickupDropoffAutocomplete);
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl50Q8W4ZF2_EkOJ1lnRoVxO1IdjIupjM&libraries=places&callback=initMap" async defer></script>
 
     <script>
         const optionCustomize = document.getElementById('optionCustomize');
@@ -520,8 +490,6 @@ try {
             });
         });
     </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl50Q8W4ZF2_EkOJ1lnRoVxO1IdjIupjM&libraries=places&callback=initMap" async defer></script>
 
     <script>
         const btn = document.getElementById('guestDropdownButton');
@@ -551,7 +519,7 @@ try {
     </script>
 
     <script>
-        let map, autocomplete;
+        let map, autocomplete, pickupAutocomplete, dropoffAutocomplete;
         let markers = [];
         let locations = [];
         let polyline;
@@ -572,13 +540,31 @@ try {
                 map: map
             });
 
-            // Google Places Autocomplete restricted to Sri Lanka
-            autocomplete = new google.maps.places.Autocomplete(document.getElementById("cityInput"), {
-                componentRestrictions: { country: "lk" },
-                fields: ["geometry", "name", "formatted_address"]
-            });
-
+            // City autocomplete
+            autocomplete = new google.maps.places.Autocomplete(
+                document.getElementById("cityInput"),
+                {
+                    componentRestrictions: { country: "lk" },
+                    fields: ["geometry", "name", "formatted_address"]
+                }
+            );
             autocomplete.addListener("place_changed", onPlaceSelected);
+
+            // Pickup & Dropoff autocomplete
+            const options = {
+                componentRestrictions: { country: "lk" },
+                fields: ["geometry", "formatted_address", "name"]
+            };
+
+            pickupAutocomplete = new google.maps.places.Autocomplete(
+                document.getElementById("pickupLocation"),
+                options
+            );
+
+            dropoffAutocomplete = new google.maps.places.Autocomplete(
+                document.getElementById("dropoffLocation"),
+                options
+            );
         }
 
         function onPlaceSelected() {
