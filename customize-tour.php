@@ -119,7 +119,7 @@ if (!empty($themeIDsArray)) {
                 </ol>
             </nav>
 
-            <h2 class="heading mb-4">Customize Your Selected Tour</h2>
+            <h2 class="heading mb-4">Plan Your Tour..</h2>
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="card shadow-sm">
@@ -270,6 +270,59 @@ if (!empty($themeIDsArray)) {
                         <div class="mt-2" id="allergyDetails" style="display:none;">
                             <input type="text" class="form-control" placeholder="Please specify your allergy">
                         </div>
+                    </div>
+                </div>
+                <hr>
+               <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="row g-2 align-items-end">
+                            <div class="col-auto">
+                                <label for="title" class="form-label small">Title<span class="text-danger">*</span></label>
+                                <select class="form-select" id="title" name="title" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Ms">Ms</option>
+                                    <option value="Dr">Dr</option>
+                                    <option value="Prof">Prof</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="fullName" class="form-label">Full Name<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label fw-semibold" for="email">Email<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label fw-semibold" for="whatsapp">WhatsApp Number<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number" required>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label fw-semibold" for="country">Country<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="country" name="country" placeholder="Enter your country" required>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label fw-semibold" for="nationality">Nationality<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter your Nationality" required>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label fw-semibold" for="flightNumber">Flight Number<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="flightNumber" name="flightNumber" placeholder="Enter flight number" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <label class="form-label fw-semibold" for="remarks">Remarks</label>
+                        <textarea class="form-control" id="remarks" name="remarks" rows="4" placeholder="Any remarks or requests"></textarea>
                     </div>
                 </div>
             </div>

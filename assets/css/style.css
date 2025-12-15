@@ -641,9 +641,9 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-weight: 500;
 }
 
-#toursCustomizePage .form-control {
+#toursCustomizePage .form-control, #toursCustomizePage .form-select {
   border-radius: 0;
-  border-color: #494949 !important;
+  border-color: rgba(73, 73, 73, 0.5803921569) !important;
 }
 #toursCustomizePage #customize-tour {
   overflow: hidden;
@@ -656,10 +656,14 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   -o-object-fit: cover;
      object-fit: cover;
 }
-#toursCustomizePage #customize-tour h3 {
+#toursCustomizePage #customize-tour h3, #toursCustomizePage #customize-tour label {
   font-size: 16px;
   font-family: "Shantell Sans", cursive;
   font-weight: 600;
+}
+#toursCustomizePage #customize-tour .form-check-label {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400;
 }
 #toursCustomizePage #customize-tour .bin-button {
   height: 30px !important;

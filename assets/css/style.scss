@@ -800,9 +800,9 @@ header {
 }
 
 #toursCustomizePage {
-  .form-control {
+  .form-control, .form-select {
     border-radius: 0;
-    border-color: #494949 !important;
+    border-color: #49494994 !important;
   }
 
   #customize-tour {
@@ -817,10 +817,15 @@ header {
       object-fit: cover;
     }
 
-    h3 {
+    h3, label {
       font-size: 16px;
       font-family: $font-handwriting;
       font-weight: 600;
+    }
+
+    .form-check-label {
+      font-family: $font-secondary !important;
+      font-weight: 400;
     }
 
     .bin-button {
