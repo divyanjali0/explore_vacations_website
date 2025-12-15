@@ -212,24 +212,24 @@ if (!empty($themeIDsArray)) {
                     </div>
                 </div>
                 <hr>
-                <div class="row mb-4">
+                <div class="cities row mb-4">
                     <div class="col-md-6">
                         <div class="d-flex align-items-center mb-2 text-nowrap">
                             <h3 class="me-3 mb-0">Add City</h3>
                             <input type="text" id="cityInput" class="form-control me-2" placeholder="Enter city or location">
-                            <button class="btn btn-primary" id="addCityBtn">Add</button>
+                            <button class="btn btn-primary" id="addCityBtn"><img src="assets/images/icons/plus.svg" class="img-fluid" alt="button"></button>
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <h3>Added Cities</h3>
-                            <!-- <button class="btn btn-sm btn-danger" id="removeAllBtn" style="display:none;">Remove All</button> -->
+                            <button class="btn btn-sm btn-danger remove-btn" id="removeAllBtn" style="display:none;"><img src="assets/images/icons/bin.svg" class="img-fluid bin-button"></button>
                         </div>
-                        <ul class="list-group" id="cityList"></ul>
+                        <ul class="list-group mt-2" id="cityList"></ul>
                     </div>
 
                     <div class="col-md-6 mt-4 mt-md-0">
                         <h3>Tour Map</h3>
-                        <div id="map" style="height: 400px; width: 100%;"></div>
+                        <div id="map" style="height: 300px; width: 100%;"></div>
                     </div>
                 </div>
             </div>
@@ -355,7 +355,7 @@ if (!empty($themeIDsArray)) {
             // Add to list with remove button
             const li = document.createElement("li");
             li.className = "list-group-item d-flex justify-content-between align-items-center";
-            li.innerHTML = `<span>${label}</span> <button class="btn btn-sm btn-outline-danger">Remove</button>`;
+            li.innerHTML = `<span>${label}</span> <button class="btn btn-sm btn-outline-danger"><img src="assets/images/icons/bin.svg" class="img-fluid bin-button"></button>`;
             document.getElementById("cityList").appendChild(li);
 
             const index = markers.length - 1;

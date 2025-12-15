@@ -657,6 +657,17 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-family: "Shantell Sans", cursive;
   font-weight: 600;
 }
+#toursCustomizePage #customize-tour .bin-button {
+  height: 30px !important;
+}
+#toursCustomizePage #customize-tour .cities .btn {
+  background-color: #ffffff;
+  border: 0;
+  padding: 0;
+}
+#toursCustomizePage #customize-tour .cities .btn img {
+  height: 40px;
+}
 
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,

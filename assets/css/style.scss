@@ -817,6 +817,22 @@ header {
       font-family: $font-handwriting;
       font-weight: 600;
     }
+
+    .bin-button {
+      height: 30px !important;
+    }
+
+    .cities {
+      .btn {
+        background-color: $color-white;
+        border: 0;
+        padding: 0;
+
+        img {
+          height: 40px;
+        }
+      }
+    }
   }
 }
 
