@@ -232,6 +232,46 @@ if (!empty($themeIDsArray)) {
                         <div id="map" style="height: 300px; width: 100%;"></div>
                     </div>
                 </div>
+                <hr>
+                <div class="row">
+                    <!-- Question 1: Meal Plan -->
+                    <div class="col-12 col-md-6 mb-4">
+                        <label class="form-label fw-semibold">Select Your Meal Plan</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan1" value="Breakfast Only">
+                            <label class="form-check-label" for="mealPlan1">Breakfast Only</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan2" value="Half Board">
+                            <label class="form-check-label" for="mealPlan2">Half Board</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan3" value="Full Board">
+                            <label class="form-check-label" for="mealPlan3">Full Board</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mealPlan" id="mealPlan4" value="All Inclusive">
+                            <label class="form-check-label" for="mealPlan4">All Inclusive</label>
+                        </div>
+                    </div>
+
+                    <!-- Question 2: Meal Allergy -->
+                    <div class="col-12 col-md-6 mb-4">
+                        <label class="form-label fw-semibold">Do you have any meal allergy issues?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyYes" value="Yes">
+                            <label class="form-check-label" for="mealAllergyYes">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mealAllergy" id="mealAllergyNo" value="No">
+                            <label class="form-check-label" for="mealAllergyNo">No</label>
+                        </div>
+                        <!-- Optional: input field if "Yes" is selected -->
+                        <div class="mt-2" id="allergyDetails" style="display:none;">
+                            <input type="text" class="form-control" placeholder="Please specify your allergy">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -393,6 +433,21 @@ if (!empty($themeIDsArray)) {
                 map.setZoom(7);
             }
         }
+    </script>
+
+    <script>
+        // Show allergy input if Yes is selected
+        const yesRadio = document.getElementById('mealAllergyYes');
+        const noRadio = document.getElementById('mealAllergyNo');
+        const allergyInput = document.getElementById('allergyDetails');
+
+        yesRadio.addEventListener('change', () => {
+            allergyInput.style.display = yesRadio.checked ? 'block' : 'none';
+        });
+
+        noRadio.addEventListener('change', () => {
+            allergyInput.style.display = 'none';
+        });
     </script>
 
 </body>
