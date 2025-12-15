@@ -274,21 +274,36 @@ try {
                             <div class="d-flex gap-3 align-items-center">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="hotelRating" id="rating3" value="3">
-                                    <label class="form-check-label" for="rating3">3 &#9733;</label>
+                                    <label class="form-check-label" for="rating3">3 <span style="color:#ab9629">&#9733;</span></label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="hotelRating" id="rating4" value="4">
-                                    <label class="form-check-label" for="rating4">4 &#9733;</label>
+                                    <label class="form-check-label" for="rating4">4 <span style="color:#ab9629">&#9733;</span></label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="hotelRating" id="rating5" value="5">
-                                    <label class="form-check-label" for="rating5">5 &#9733;</label>
+                                    <label class="form-check-label" for="rating5">5 <span style="color:#ab9629">&#9733;</span></label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <hr>
-                   <div class="cities row">
+
+                    <div class="row my-3">
+                        <div class="col-12 col-md-6">
+                            <label for="pickupLocation" class="form-label fw-semibold">Pickup Location</label>
+                            <input type="text" class="form-control" id="pickupLocation" name="pickupLocation" placeholder="Enter pickup location" required>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="dropoffLocation" class="form-label fw-semibold">Dropoff Location</label>
+                            <input type="text" class="form-control" id="dropoffLocation" name="dropoffLocation" placeholder="Enter dropoff location" required>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="cities row">
                         <div class="col-md-6">
                             <div class="d-flex align-items-center text-nowrap">
                                 <h3 class="me-3 mb-0">Add City</h3>
@@ -311,6 +326,7 @@ try {
                             <div id="map" style="height: 300px; width: 100%;"></div>
                         </div>
                     </div>
+
                     <hr>
 
                     <div class="row">
@@ -453,6 +469,38 @@ try {
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+        let pickupAutocomplete, dropoffAutocomplete;
+
+        function initPickupDropoffAutocomplete() {
+            // Restrict to Sri Lanka or remove if global
+            const options = {
+                componentRestrictions: { country: "lk" }, 
+                fields: ["geometry", "name", "formatted_address"]
+            };
+
+            pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById("pickupLocation"), options);
+            dropoffAutocomplete = new google.maps.places.Autocomplete(document.getElementById("dropoffLocation"), options);
+
+            pickupAutocomplete.addListener("place_changed", () => {
+                const place = pickupAutocomplete.getPlace();
+                if (!place.geometry) {
+                    alert("Please select a pickup location from the dropdown");
+                }
+            });
+
+            dropoffAutocomplete.addListener("place_changed", () => {
+                const place = dropoffAutocomplete.getPlace();
+                if (!place.geometry) {
+                    alert("Please select a dropoff location from the dropdown");
+                }
+            });
+        }
+
+        // Call this inside your existing initMap callback or on DOMContentLoaded
+        google.maps.event.addDomListener(window, 'load', initPickupDropoffAutocomplete);
+    </script>
 
     <script>
         const optionCustomize = document.getElementById('optionCustomize');
