@@ -249,27 +249,29 @@ try {
                         </div>
                     </div>
                     <hr>
-                    <div class="cities row mb-4">
+                   <div class="cities row">
                         <div class="col-md-6">
-                            <div class="d-flex align-items-center mb-2 text-nowrap">
+                            <div class="d-flex align-items-center text-nowrap">
                                 <h3 class="me-3 mb-0">Add City</h3>
                                 <input type="text" id="cityInput" class="form-control me-2" placeholder="Enter city or location">
                                 <button class="btn btn-primary" id="addCityBtn"><img src="assets/images/icons/plus.svg" class="img-fluid" alt="button"></button>
                             </div>
 
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>Added Cities</h3>
-                                <button class="btn btn-sm btn-danger remove-btn" id="removeAllBtn" style="display:none;"><img src="assets/images/icons/bin.svg" class="img-fluid bin-button"></button>
+                            <!-- Hidden initially -->
+                            <div class="d-flex justify-content-between align-items-center mt-4" id="addedCitiesContainer" style="display:none;">
+                                <h3 id="addedCitiesHeading" style="display:none;">Added Cities</h3>
+                                <button class="btn btn-sm btn-danger remove-btn" id="removeAllBtn" style="display:none;">
+                                    <img src="assets/images/icons/bin.svg" class="img-fluid bin-button">
+                                </button>
                             </div>
-                            <ul class="list-group mt-2" id="cityList"></ul>
+                            <ul class="list-group mt-2" id="cityList" style="display:none;"></ul>
                         </div>
 
-                        <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="col-md-6 mt-4 mt-md-0" id="mapContainer" style="display:none;">
                             <h3>Tour Map</h3>
                             <div id="map" style="height: 300px; width: 100%;"></div>
                         </div>
                     </div>
-
                     <hr>
 
                     <div class="row">
@@ -310,7 +312,7 @@ try {
                     </div>
 
                     <hr>
-                    
+
                     <div class="row">
                         <div class="col-12 col-md-6 mb-3">
                             <div class="row g-2 align-items-end">
@@ -528,9 +530,13 @@ try {
             markers.forEach(m => bounds.extend(m.getPosition()));
             map.fitBounds(bounds);
 
-            // Show remove all button
-            const removeAllBtn = document.getElementById("removeAllBtn");
-            removeAllBtn.style.display = "inline-block";
+            // Show map, added cities container, city list, and remove all button
+            document.getElementById("addedCitiesContainer").style.display = "flex";
+            document.getElementById("cityList").style.display = "block";
+            document.getElementById("mapContainer").style.display = "block";
+            document.getElementById("removeAllBtn").style.display = "inline-block";
+            document.getElementById("addedCitiesHeading").style.display = "block"; // show heading
+
 
             // Add to list with remove button
             const li = document.createElement("li");
@@ -551,7 +557,18 @@ try {
                 li.remove();
             }
             updateMapBounds();
+
+            if (markers.length === 0) {
+                // Hide everything if no cities left
+                document.getElementById("addedCitiesContainer").style.display = "none";
+                document.getElementById("cityList").style.display = "none";
+                document.getElementById("mapContainer").style.display = "none";
+                document.getElementById("removeAllBtn").style.display = "none";
+                document.getElementById("addedCitiesHeading").style.display = "none"; // hide heading
+
+            }
         }
+
 
         function removeAllLocations() {
             markers.forEach(m => m.setMap(null));
@@ -559,8 +576,13 @@ try {
             locations = [];
             polyline.setPath([]);
             document.getElementById("cityList").innerHTML = "";
+
+            // Hide map and added cities section
+            document.getElementById("addedCitiesContainer").style.display = "none";
+            document.getElementById("cityList").style.display = "none";
+            document.getElementById("mapContainer").style.display = "none";
+
             updateMapBounds();
-            document.getElementById("removeAllBtn").style.display = "none";
         }
 
         function updateMapBounds() {
@@ -576,7 +598,6 @@ try {
     </script>
 
     <script>
-        // Show allergy input if Yes is selected
         const yesRadio = document.getElementById('mealAllergyYes');
         const noRadio = document.getElementById('mealAllergyNo');
         const allergyInput = document.getElementById('allergyDetails');
