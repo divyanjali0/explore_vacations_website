@@ -80,7 +80,6 @@ try {
     <link rel="stylesheet" href="assets/css/responsive.css">
 
         <style>
-        /* Smooth slide down/up animation */
         .dropdown-menu {
             display: none;
             max-height: 0;
@@ -90,13 +89,37 @@ try {
 
         .dropdown-menu.show {
             display: block;
-            max-height: 500px; /* enough to show all content */
+            max-height: 500px; 
         }
 
         .input-group-sm > .btn, .input-group-sm > .form-control {
             height: 30px;
             font-size: 0.875rem;
         }
+
+        .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
     </style>
 </head>
 
@@ -187,7 +210,6 @@ try {
 
                 <div class="card mt-4 border-0">
                     <div class="row g-3 align-items-center">
-                        <!-- Dates -->
                         <div class="col-md-6 col-lg-4">
                             <label class="form-label fw-semibold">Dates</label>
                             <div class="input-group">
@@ -197,7 +219,6 @@ try {
                             </div>
                         </div>
 
-                        <!-- Guests -->
                         <div class="col-md-6 col-lg-4">
                             <label class="form-label fw-semibold">Guests</label>
                             <div class="dropdown">
@@ -244,6 +265,24 @@ try {
                                             <button class="btn btn-outline-secondary increment" type="button" data-target="infants">+</button>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <label class="form-label fw-semibold">Preferred Hotel Rating</label>
+                            <div class="d-flex gap-3 align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hotelRating" id="rating3" value="3">
+                                    <label class="form-check-label" for="rating3">3 &#9733;</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hotelRating" id="rating4" value="4">
+                                    <label class="form-check-label" for="rating4">4 &#9733;</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hotelRating" id="rating5" value="5">
+                                    <label class="form-check-label" for="rating5">5 &#9733;</label>
                                 </div>
                             </div>
                         </div>
