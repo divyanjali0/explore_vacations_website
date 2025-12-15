@@ -273,7 +273,7 @@ if (!empty($themeIDsArray)) {
                     </div>
                 </div>
                 <hr>
-               <div class="row">
+                <div class="row">
                     <div class="col-12 col-md-6 mb-3">
                         <div class="row g-2 align-items-end">
                             <div class="col-auto">
@@ -306,7 +306,10 @@ if (!empty($themeIDsArray)) {
 
                     <div class="col-12 col-md-6 mb-3">
                         <label class="form-label fw-semibold" for="country">Country<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="country" name="country" placeholder="Enter your country" required>
+                        <select class="form-select" id="country" name="country" required>
+                            <option value="" selected disabled>Select your country</option>
+                            <!-- Countries will be dynamically populated here -->
+                        </select>
                     </div>
 
                     <div class="col-12 col-md-6 mb-3">
@@ -502,6 +505,20 @@ if (!empty($themeIDsArray)) {
             allergyInput.style.display = 'none';
         });
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const countrySelect = document.getElementById("country");
+            fetch("https://restcountries.com/v3.1/all?fields=name")
+                .then(res => res.json())
+                .then(data => Array.isArray(data) && 
+                    data.sort((a,b) => a.name.common.localeCompare(b.name.common))
+                        .forEach(c => countrySelect.add(new Option(c.name.common, c.name.common)))
+                )
+                .catch(err => console.error("Error fetching countries:", err));
+        });
+    </script>
+
 
 </body>
 </html>
