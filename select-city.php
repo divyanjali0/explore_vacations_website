@@ -18,6 +18,19 @@
         $stmt->execute($themeIDsArray);
         $themesData = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    $citiesData = [];
+
+    $query = "
+        SELECT id, name, images
+        FROM cities
+        ORDER BY name ASC
+    ";
+
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $citiesData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -88,10 +101,39 @@
                 </ol>
             </nav>
 
-            <div class="row">
-                <div class="row">
-                    
-                </div>
+            <div class="row g-4 mt-3">
+                <?php if (!empty($citiesData)): ?>
+                    <?php foreach ($citiesData as $city): ?>
+                        <?php 
+                            $cityImages = json_decode($city['images'], true); 
+                            $firstImage = !empty($cityImages) ? 'assets/' . $cityImages[0] : '';
+                        ?>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card h-100 shadow-sm city-card">
+                                <img src="<?php echo htmlspecialchars($firstImage); ?>"   class="card-img-top" alt="<?php echo htmlspecialchars($city['name']); ?>">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">
+                                        <?php echo htmlspecialchars($city['name']); ?>
+                                    </h5>
+                                </div>
+
+                                <div class="card-footer bg-transparent text-center">
+                                    <a
+                                        href="city-tours.php?city=<?php echo $city['id']; ?>"
+                                        class="btn btn-primary btn-sm"
+                                    >
+                                        View Tours
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12 text-center">
+                        <p class="text-muted">No cities found.</p>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>

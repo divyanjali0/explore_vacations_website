@@ -705,6 +705,11 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
 #selectToursPage #select-city .active::after {
   border-bottom: 1px solid #ffffff;
 }
+#selectToursPage #select-city img {
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,

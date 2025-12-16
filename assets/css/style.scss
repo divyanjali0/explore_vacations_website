@@ -886,6 +886,11 @@ header {
     .active::after {
       border-bottom: 1px solid $color-white;
     }
+
+    img {
+      height: 12rem;
+      object-fit: cover;
+    }
   }
 }
 
