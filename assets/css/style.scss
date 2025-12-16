@@ -879,6 +879,16 @@ header {
   }
 }
 
+#selectToursPage {
+  #select-city {
+    overflow: hidden;
+
+    .active::after {
+      border-bottom: 1px solid $color-white;
+    }
+  }
+}
+
 //Whatsapp widget styles starts
 #whatsapp-widget {
   .chat-header,

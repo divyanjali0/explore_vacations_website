@@ -149,7 +149,7 @@
                     customizeBtn.classList.add('d-none');
                 }
 
-                customizeBtn.href = "./customize-tour?themes=" + Array.from(selectedThemes).join(",");
+                customizeBtn.href = "./select-city?themes=" + Array.from(selectedThemes).join(",");
             });
         });
     </script>

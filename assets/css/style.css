@@ -699,6 +699,13 @@ header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item:hover .nav-link:
   font-weight: 600;
 }
 
+#selectToursPage #select-city {
+  overflow: hidden;
+}
+#selectToursPage #select-city .active::after {
+  border-bottom: 1px solid #ffffff;
+}
+
 #whatsapp-widget .chat-header,
 #whatsapp-widget .chat-content,
 #whatsapp-widget .message-input {
