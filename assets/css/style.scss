@@ -891,6 +891,47 @@ header {
       height: 12rem;
       object-fit: cover;
     }
+
+    h3 {
+      font-size: 16px;
+      font-family: $font-handwriting;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .planTripBtn {
+      background-color: $color-primary;
+      border-radius: 0;
+    }
+
+    .selectable-city {
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 0;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      &.selected {
+        border: 2px solid $color-primary;
+      }
+
+      .city-checkbox {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+
+        input {
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 

@@ -103,33 +103,35 @@
 
             <div class="row g-4 mt-3">
                 <?php if (!empty($citiesData)): ?>
-                    <?php foreach ($citiesData as $city): ?>
+                  <?php foreach ($citiesData as $city): ?>
                         <?php 
                             $cityImages = json_decode($city['images'], true); 
                             $firstImage = !empty($cityImages) ? 'assets/' . $cityImages[0] : '';
                         ?>
                         <div class="col-12 col-lg-3 col-md-6">
-                            <div class="card h-100 shadow-sm city-card">
-                                <img src="<?php echo htmlspecialchars($firstImage); ?>"   class="card-img-top" alt="<?php echo htmlspecialchars($city['name']); ?>">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">
-                                        <?php echo htmlspecialchars($city['name']); ?>
-                                    </h5>
+                            <div  class="card h-100 shadow-sm city-card selectable-city" data-city-id="<?php echo $city['id']; ?>" >
+                                <!-- Checkbox -->
+                                <div class="city-checkbox">
+                                    <input type="checkbox" name="cities[]" value="<?php echo $city['id']; ?>">
                                 </div>
+                                <img src="<?php echo htmlspecialchars($firstImage); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($city['name']); ?>">
 
-                                <div class="card-footer bg-transparent text-center">
-                                    <a
-                                        href="city-tours.php?city=<?php echo $city['id']; ?>"
-                                        class="btn btn-primary btn-sm"
-                                    >
-                                        View Tours
-                                    </a>
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">
+                                        <?php echo htmlspecialchars($city['name']); ?>
+                                    </h3>
                                 </div>
 
                             </div>
                         </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
+                        <?php endforeach; ?>
+
+                    <div class="text-center mt-4">
+                        <button id="planTripBtn" class="planTripBtn btn btn-success px-4"style="display:none;">
+                            Plan Trip
+                        </button>
+                    </div>
+                    <?php else: ?>
                     <div class="col-12 text-center">
                         <p class="text-muted">No cities found.</p>
                     </div>
@@ -151,6 +153,42 @@
     <script src="assets/js/whatsapp-widget.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const cards = document.querySelectorAll('.selectable-city');
+            const planTripBtn = document.getElementById('planTripBtn');
+
+            cards.forEach(card => {
+                card.addEventListener('click', function (e) {
+
+                    // Prevent double toggle when clicking checkbox directly
+                    if (e.target.tagName === 'INPUT') return;
+
+                    const checkbox = card.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked;
+                    card.classList.toggle('selected', checkbox.checked);
+
+                    togglePlanButton();
+                });
+            });
+
+            document.querySelectorAll('.city-checkbox input').forEach(cb => {
+                cb.addEventListener('change', function () {
+                    cb.closest('.selectable-city').classList.toggle('selected', cb.checked);
+                    togglePlanButton();
+                });
+            });
+
+            function togglePlanButton() {
+                const anyChecked = document.querySelectorAll('.city-checkbox input:checked').length > 0;
+                planTripBtn.style.display = anyChecked ? 'inline-block' : 'none';
+            }
+
+        });
+    </script>
+
 </body>
 
 </html>
